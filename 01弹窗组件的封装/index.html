@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>弹窗组件的封装</title>
+  <link rel="stylesheet" href="./index.css"/>
+</head>
+
+<body>
+<!-- <div class="modal-wrapper"></div>
+<div class="modal-dialog">
+<div class="modal-header">
+<span class="modal-title">提示</span>
+<span class="modal-close">X</span>
+</div>
+<div class="modal-body">
+<span>这是一段文本</span>
+<input class="input-inner" type="text" />
+</div>
+<div class="modal-footer">
+<span class="modal-default">取消</span>
+<span class="modal-primary">确定</span>
+</div>
+</div> -->
+<button class="open-dialog">打开弹窗</button>
+<button class="open-input-dialog">显示扩展对话框</button>
+
+<script type="module">
+  import Dialog, {DialogInput} from './index.js';
+
+  const dialog = new Dialog({
+    width: '30%',
+    height: '250px',
+    title: 'nanfeiyan 的弹窗',
+    content: 'nanfeiyan 的弹窗内容',
+    dragable: true, // 是否可拖拽
+    maskable: true, // 是否有遮罩
+    isCancel: true, // 是否有取消
+    success: () => {
+      console.log('成功了打算做。。。');
+    },
+    cancel: () => {
+      console.log('取消了打算做。。。');
+    },
+    close: () => {
+      console.log('关闭了打算做。。。');
+    }
+  });
+  document.querySelector('.open-dialog').addEventListener('click', function () {
+    dialog.openDialog()
+  })
+
+  // 将输入的内容输出
+  const dialogInput = new DialogInput({
+    success: (e) => {
+      console.log('成功：', e);
+      console.log(e.detail);
+    },
+  });
+  document.querySelector('.open-input-dialog').addEventListener('click', function (e) {
+    dialogInput.openDialog()
+  })
+</script>
+</body>
+</html>

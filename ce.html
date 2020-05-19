@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // var obj = document
+      document.addEventListener('cat', function (e) {
+        console.log(e.detail, 555);
+      });
+
+      // create and dispatch the event
+      var event = new CustomEvent('cat', {
+        detail: {
+          hazcheeseburger: true,
+        },
+      });
+      document.dispatchEvent(event);
+
+      console.log(EventTarget.prototype)
+    </script>
+  </body>
+</html>

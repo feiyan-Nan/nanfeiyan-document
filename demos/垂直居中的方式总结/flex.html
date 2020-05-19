@@ -21,9 +21,30 @@
 </html>
 <script src="https://cdn.bootcss.com/axios/0.19.0/axios.js"></script>
 <script>
-axios.get('https://www.easy-mock.com/mock/5b3600b4da15370b9a83b24e/example/feiyan').then(res => {
-  console.log(res);
-})
+  // 节流
+const throttle = (fn, wait=500) => {
+  let time = 0;
+  return function (...arg) {
+    let now = new Date().getTime()
+    if(now - time > wait) {
+      fn.apply(this, arg)
+      time = now
+    }
+  }
+}
+const betterFn = throttle(() => {console.log('节流了')}, 2000);
+// setInterval(betterFn, 50)
+
+const debounce = (fn, wait = 500) => {
+  let timer = null
+  return function (...args) {
+    if(timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(this, args)
+    }, wait)
+  }
+}
+
 </script>
 
 
