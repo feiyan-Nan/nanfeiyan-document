@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>深克隆</title>
+</head>
+<body>
+<script type="text/javascript">
+  function deepClone(obj) {
+    if(obj === null || typeof obj !== 'object') {
+      return obj
+    }
+    var temStorage = obj.constructor()
+    for(let key in obj) {
+      temStorage[key] = deepClone(obj[key])
+    }
+    return temStorage
+  }
+  var employeeDetailsOriginal = {
+    name: '前端南飞雁',
+    family: {
+      name: '前端大家庭',
+      childs: ['小张', '小红'],
+    }
+  };
+  let employeeDetailsDuplicate = deepClone(employeeDetailsOriginal)
+  employeeDetailsDuplicate.family.name = '后端大家庭'
+  employeeDetailsDuplicate.family.childs[0] = '小李'
+  console.log(employeeDetailsDuplicate);  // 深克隆的
+  console.log(employeeDetailsOriginal); // 原始的
+</script>
+</body>
+</html>

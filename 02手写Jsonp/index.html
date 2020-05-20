@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jsonp</title>
+</head>
+<body>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript">
+  // 调用方式: jsonp().then(res => console.log(res))
+  jsonp('https://www.baidu.com/home/msg/data/personalcontent', {
+    num: 8,
+    _req_seqid: '',
+    sid: '',
+    _: '1589880241498'
+  }, 'callback').then(res => {
+    console.log(res);
+  })
+</script>
+</body>
+</html>

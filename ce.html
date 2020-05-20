@@ -6,20 +6,28 @@
   </head>
   <body>
     <script type="text/javascript">
-      // var obj = document
-      document.addEventListener('cat', function (e) {
-        console.log(e.detail, 555);
-      });
-
-      // create and dispatch the event
-      var event = new CustomEvent('cat', {
-        detail: {
-          hazcheeseburger: true,
-        },
-      });
-      document.dispatchEvent(event);
-
-      console.log(EventTarget.prototype)
+      function deepClone(obj) {
+        if(obj === null || typeof obj !== 'object') {
+          return obj
+        }
+        var temStorage = obj.constructor()
+        for(let key in obj) {
+          temStorage[key] = deepClone(obj[key])
+        }
+        return temStorage
+      }
+      var employeeDetailsOriginal = {
+        name: '前端南飞雁',
+        family: {
+          name: '前端大家庭',
+          childs: ['小张', '小红'],
+        }
+      };
+      let employeeDetailsDuplicate = deepClone(employeeDetailsOriginal)
+      employeeDetailsDuplicate.family.name = '后端大家庭'
+      employeeDetailsDuplicate.family.childs[0] = '小李'
+      console.log(employeeDetailsDuplicate);  // 深克隆的
+      console.log(employeeDetailsOriginal); // 原始的
     </script>
   </body>
 </html>
