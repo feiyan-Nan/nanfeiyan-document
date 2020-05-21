@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let arr = [1, [2, [3, [4, 5]]], 6];
+      // 方案一
+      function flat(arr) {
+        if (!Array.isArray(arr)) {
+          return [arr];
+        }
+        let temp = [];
+        for (let key in arr) {
+          temp = temp.concat(flat(arr[key]));
+        }
+        return temp;
+      }
+      console.log(flat(arr));
+      // 方案二
+      function flat1(arr) {
+        while (arr.some(Array.isArray)) {
+          arr = [].concat(...arr);
+        }
+        return arr;
+      }
+      console.log(flat1(arr));
+      // 方案三(这种方式不好: 原因是如果数组中存在字符串)
+      function flat2(arr) {
+        return arr.toString().split(',').map(Number);
+      }
+      console.log(flat2(arr));
+      // 方案四 推荐这种方式
+      function flat3(arr) {
+        return arr.reduce((pre, next) => {
+          return pre.concat(Array.isArray(next) ? flat3(next) : next);
+        }, []);
+      }
+      console.log(flat3(arr));
+      // 方案五
+      console.log(arr.flat(Infinity));
+    </script>
+  </body>
+</html>

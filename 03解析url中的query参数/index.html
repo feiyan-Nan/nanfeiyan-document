@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // case1:
+      function queryParams(name) {
+        let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        let r = window.location.search.slice(1).match(reg);
+        if (r != null) {
+          return decodeURIComponent(r[2]);
+        }
+        return null;
+      }
+      // case2:
+      console.log(queryParams('_ijt'));
+
+      function queryParams(name) {
+        let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        let r = window.location.search.slice(1).match(reg);
+        if (r != null) {
+          return decodeURIComponent(r[2]);
+        }
+        return null;
+      }
+
+      function deepClone(obj) {
+        if (obj === null || typeof obj !== 'object') {
+          return obj;
+        }
+        let temp = obj.constructor();
+        for (let key in obj) {
+          temp[key] = deepClone(obj[key]);
+        }
+        return temp;
+      }
+    </script>
+  </body>
+</html>
