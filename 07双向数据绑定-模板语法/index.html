@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index-Vue</title>
+  <script src="index.js"></script>
+</head>
+<body>
+<div id="app" class="floor-1">
+  {{message1}} {{ doIt1 }}
+  <div class="floor-2">
+    {{ message2 }} {{ doIt2 }}
+    <div class="floor-3">
+      {{ message3 }} {{ doIt3 }}
+    </div>
+  </div>
+  {{ sayGoodBye }}
+</div>
+
+<script>
+  // 数据驱动
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      message1: 'Hello jsliang！',
+      message2: 'Hello 梁峻荣！',
+      message3: 'Hello 小梁！',
+      doIt1: '让我们荡起双桨~',
+      doIt2: '勇往直前~',
+      doIt3: '直到胜利~',
+      sayGoodBye: '玩得高兴，下次再见！',
+    },
+  });
+</script>
+</body>
+</html>
