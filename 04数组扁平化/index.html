@@ -42,6 +42,13 @@
       console.log(flat3(arr));
       // 方案五
       console.log(arr.flat(Infinity));
+
+      // 方案6
+      function flat4(arr) {
+        return JSON.stringify(arr).replace(/(\[|\])/g, '').split(',').map(Number)
+      }
+
+      console.log('方案6', flat4(arr));
     </script>
   </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  function ajax(url, fnSuccess, fnFaild) {
+    var XHR = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject()
+    XHR.open('GET',url,true)
+    XHR.send()
+    XHR.onreadystatechange = function () {
+      if(XHR.readyState == 4 && XHR.status == 200) {
+        fnSuccess(XHR.responseText)
+      }else {
+        fnFaild()
+      }
+    }
+  }
+</script>
+</body>
+</html>

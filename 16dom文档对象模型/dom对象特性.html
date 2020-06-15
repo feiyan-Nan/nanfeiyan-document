@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="dd">556</div>
+<script type="text/javascript">
+  // dom也是对象的一种, 我们可以像使用object对象那样去操作它
+  let dd = document.getElementById('dd')
+  Object.assign(dd, {
+    onclick() {
+      this.change()
+    },
+    change() {
+      alert('nanfeiyan')
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    // 手写instanceof 的实现：
+    // instanceof 运算符用于测试构造函数的 prototype 属性是否出现在对象原型链中的任何位置。
+    var arr = [];
+
+    function instance_of(L, R) {
+      const baseType = ['string', 'number', 'boolean', 'symbol', 'undefined'];
+      if (baseType.includes(typeof L)) {
+        return false;
+      }
+      L = L.__proto__;
+      let RP = R.prototype;
+      while (true) {
+        if (L === null) {
+          return false;
+        }
+        if (L === RP) {
+          return true;
+        }
+        L = L.__proto__;
+      }
+    }
+
+    console.log(instance_of(arr, Array));
+  </script>
+</html>

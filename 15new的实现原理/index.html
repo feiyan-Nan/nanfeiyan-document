@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  // create实现了new的相关原理
+  function create(fn, ...args) {
+    let obj = {}
+    obj.__proto__ = fn.prototype
+    let result = fn.apply(obj, args)
+    if(Object.prototype.toString.call(result) === "[object Object]") {
+      return  result
+    }else {
+      return obj
+    }
+  }
+  function Human(name, age) {
+    this.name = name;
+    this.age = age
+  }
+  Human.prototype.dark = function () {
+    console.log(this.name, '年龄:', this.age)
+  }
+  // let people = new Human('nanfeiyan', 24)
+  // console.log(people.name);
+  // console.log(people);
+  let people = create(Human, 'nanfeiyan', 24)
+  people.dark()
+  console.log(people.name);
+</script>
+</body>
+</html>

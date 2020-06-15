@@ -28,6 +28,17 @@
   employeeDetailsDuplicate.family.childs[0] = '小李'
   console.log(employeeDetailsDuplicate);  // 深克隆的
   console.log(employeeDetailsOriginal); // 原始的
+
+  function deepClone(obj) {
+    if(typeof obj !== "object") {
+      return obj
+    }
+    let tempStorage = obj.constructor()
+    for(let key in obj) {
+      tempStorage[key] = deepClone(obj[key])
+    }
+    return tempStorage
+  }
 </script>
 </body>
 </html>

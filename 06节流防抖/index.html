@@ -36,6 +36,38 @@
       navigator.geolocation.getCurrentPosition((r) => {
         console.log(r);
       });
+
+      // 防抖
+      function debounce(fn, wait) {
+        let timer = null
+        return function (...args) {
+          let context = this
+          if(timer) clearTimeout(timer)
+          timer = setTimeout(() => {
+            fn.apply(context, args)
+          })
+        }
+      }
+
+      // 节流
+      function throttle(fn, wait) {
+        let timer = null
+        return function (...args) {
+          let context = this
+          if(!timer) {
+            timer = setTimeout(() =>{
+              fn.apply(this, args)
+              timer = null
+            }, wait)
+          }
+        }
+      }
+
+      // throttle, debounce
+      // debounce
+      // throttle()
+      // debounce
+
     </script>
   </body>
 </html>
