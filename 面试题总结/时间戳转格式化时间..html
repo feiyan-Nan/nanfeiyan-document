@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  const date = new Date("1996-02-24 10:25:18")
+  function dateFormat(date, format="YYYY-MM-DD HH:mm:ss") {
+    const config = {
+      YYYY: date.getFullYear(),
+      MM: date.getMonth() + 1,
+      DD: date.getDate(),
+      HH: date.getHours(),
+      mm: date.getMinutes(),
+      ss: date.getSeconds()
+    }
+    for(const key in config) {
+      format = format.replace(key, config[key])
+    }
+    return format
+  }
+
+  console.log(dateFormat(date, 'YYYY年MM月'));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    // 这里只是简单的不能修改, 但是不报错
+    const HOST = {
+      url: "http://www.baidu.com",
+      port: 443,
+    };
+    Object.freeze(HOST);
+    HOST.port = 80; // 即使这里做了更改, 他也不会变
+    console.log(HOST.port); // 443
+
+    ("use strict");
+    const HOST = {
+      url: "http://www.baidu.com",
+      port: 443,
+    };
+    Object.freeze(HOST);
+    HOST.port = 80; // 即使这里做了更改, 他也不会变
+    console.log(HOST.port); // 443
+  </script>
+</html>

@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-    <style type="text/css">
-      .test {
-        /*background: red;*/
-        /*line-height: 5px;*/
-      }
+<head>
+  <meta charset="UTF-8"/>
+  <title>Title</title>
+  <style type="text/css">
+  </style>
+</head>
+<body>
+<div class="test">
+  <input type="text" name="username"/>
+  <input type="text" name="age"/>
+</div>
 
-      img {
-        width: 200px;
-        height: 200px;
-        vertical-align: bottom;
-      }
-
-      span {
-        background: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="test">
-      <img
-        src="https://oss.guangmangapp.com/f44f1990-e272-458b-a1b0-eb1a73cca65f.png"
-        alt=""
-      />xy
-    </div>
-
-    <script type="text/javascript">
-      let str = "I? love ?? the ?great ? ?wall in ?beijing";
-      let result = str
-        .replace(/[\?][a-z]/g, (v) => v.slice(1).toUpperCase())
-        .replace(/\?/g, "")
-        .replace(/\s\s*/g, " ");
-      console.log(result);
-    </script>
-  </body>
+<script type="text/javascript">
+  // 获取时间戳
+  console.log(Date.now());
+  console.log(new Date().getTime())
+  console.log(new Date().valueOf())
+  console.log(new Date() * 1)
+  console.log(Number(new Date()))
+</script>
+</body>
 </html>
