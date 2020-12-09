@@ -14,3 +14,8 @@ Object.freeze(HOST);
 HOST.port = 80; // 即使这里做了更改, 他也不会变
 console.log(HOST.port); // 443
 ```
+
+ts的编译方式
+
+- ts-loader 编译的时候可以进行类型检查
+- babel-loader @babel/preset-typescript 编译的时候不能进行类型检查

@@ -29,30 +29,48 @@ EventEmitter.$on('click', function (name) {
 });
 EventEmitter.$emit('click', 'nanfeiyan');
 
-
-
-
-const eventEmitter = (function () {
-  let eventList = {}
-  let on = function (name, fn) {
-    if(!eventList[name]) {
-      eventList[name] = []
-    }
-    eventList[name].push(fn)
+class EventEmtter {
+  constructor() {
+    this.eventsList = {};
   }
-  let emit = function (name, ...args) {
-    let fns = eventList[name]
-    if(!fns || fns.length === 0) {
-      return false
+  on(type, handler) {
+    if (!(handler instanceof Function)) {
+      throw new Error('哥 你错了 请传一个函数');
     }
+    if (!this.eventsList[type]) {
+      this.eventsList[type] = [];
+    }
+    this.eventsList[type].push(handler);
+  }
+  emit(type, params) {
+    if (this.eventsList[type]) {
+      this.eventsList[type].forEach((handler) => {
+        handler(params);
+      });
+    }
+  }
+  off(type, handler) {
+    if (this.eventsList[type]) {
+      this.eventsList[type].splice(this.eventsList[type].indexOf(handler), 1);
+    }
+  }
+}
 
-    for(let i = 0; i< fns; i++) {
-      fns[i].apply(this, args)
+let event = new EventEmtter();
+
+let a = (function (frequency = 5) {
+  if (frequency > 0) {
+    try {
+      // const func = () => console.log('执行测试');
+      // const func = () => {
+      //   throw new Error('出错');
+      // };
+      throw new Error('出错');
+      return func;
+    } catch (e) {
+      console.log(e);
+      frequency--;
     }
   }
-  return{
-    $on: on,
-    $emit: emit
-  }
-})()
-eventEmitter.$on()
+})(5);
+a();
