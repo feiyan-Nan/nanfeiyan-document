@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "dev:es6": "nodemon --exec babel-node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,21 @@
     "@koa/cors": "^3.1.0",
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
-    "koa-router": "^10.0.0"
+    "koa-compose": "^4.1.0",
+    "koa-helmet": "^6.0.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.6",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-node-externals": "^2.5.2"
   }
 }
