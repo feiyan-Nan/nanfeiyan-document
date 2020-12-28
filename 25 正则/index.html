@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <style>
+    #textarea {
+      width: 200px;
+      height: 100px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+<a
+  href='https://www.baidu.com/s/we?wd=nba&rsv_spt=1&rsv_iqid=0xb224b5df002d2ff6&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=0&rsv_dl=tb&rsv_sug3=6&rsv_sug1=5&rsv_sug7=101&rsv_btype=i&prefixsug=nba&rsp=0&inputT=6735&rsv_sug4=6735'></a>
+<textarea cols='30' id='textarea' name='article' rows='10'></textarea>
+</body>
+<!--坚强冷漠的人总是没有朋友-->
+<script type='text/javascript'>
+  // 量词后面加问号表示惰性
+  // const a = [];
+  let name = 'nanfeiyan';
+  const work = '程序员';
+  console.log(`姓名${name}, 工作：${work}dd`);
+  let myBlobParts = ['<html><h2>Hello Semlinker</h2></html>'];
+  let myBlob = new Blob(myBlobParts, {
+    type: 'text/html', endings: 'transparent'
+  });
+  console.log(myBlob.slice(0, 10).arrayBuffer());
+</script>
+</html>

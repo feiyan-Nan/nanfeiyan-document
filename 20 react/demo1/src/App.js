@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DataProvider from './components/DataProvider';
 
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +12,9 @@ function App() {
           render={(data) => {
             return <div>{data.target}</div>;
           }}
-        />
+        >
+          nanfeiyan
+        </DataProvider>
       </Router>
     </div>
   );
