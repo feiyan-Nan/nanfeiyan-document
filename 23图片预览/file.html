@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <style>
+    ul {
+      padding: 0;
+    }
+
+    li {
+      color: #008080;
+      list-style: none;
+    }
+
+    li:nth-child(2n + 1) {
+      color: #000080;
+    }
+
+    li:hover {
+      color: red;
+    }
+
+    input[type=checkbox] {
+      position: relative;
+      color: inherit;
+    }
+
+    input[type=checkbox]::before,
+    input[type=checkbox]::after {
+      position: absolute;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      line-height: 13px;
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    input[type=checkbox]::before {
+      content: ' ';
+      background-color: currentColor;
+    }
+
+    input[type=checkbox]:checked::after {
+      content: 'x';
+      font-size: 10px;
+      line-height: 10px;
+      color: white;
+    }
+
+    div {
+      color: red;
+      background-color: currentColor;
+    }
+  </style>
+</head>
+<body>
+<a href='' download=''></a>
+<input onchange='fileChange(this)' type='file'>
+<img id='previewContainer' src=''>
+
+<script>
+
+  /**
+   * 使用newFileReader进行渲染
+   * @param fileDom
+   */
+  /*function fileChange(fileDom) {
+    console.log(fileDom.files);
+    const render = new FileReader();
+    render.onload = function(e) {
+      document.getElementById('previewContainer').src = render.result;
+    };
+    render.readAsDataURL(fileDom?.files[0]);
+  }*/
+
+  // function fileChange(fileDom) {
+  //   console.log(fileDom.files);
+  //   const url = URL.createObjectURL(fileDom.files[0]);
+  //   const img = new Image();
+  //   img.src = url
+  //   console.log(img);
+  //   img.onload = function() {
+  //     document.getElementById('previewContainer').src = url
+  //   };
+  // }
+
+
+  // fetch('http://localhost/touxiang.png')
+  //   .then((response) => response.blob()).then(res => {
+  //   const img = new Image();
+  //   img.src = URL.createObjectURL(res);
+  //   img.onload = function() {
+  //     document.getElementById('previewContainer').src = img.src;
+  //   };
+  // });
+
+  // let hello = new Uint8Array([72, 101, 108, 108, 111]); // ⼆进制格式的 "hello"
+  // let blob = new Blob([hello, ' ', 'semlinker'], {type: 'text/plain'});
+  // const render = new FileReader()
+  // render.readAsText(blob)
+  // render.onload = function() {
+  //   console.log(render.result);
+  // }
+
+  fetch('http://localhost/touxiang.png')
+    .then((response) => response.arrayBuffer()).then(buffer => {
+    const blob = new Blob([buffer]);
+    const objectURL = URL.createObjectURL(blob);
+    document.getElementById('previewContainer').src = objectURL
+  });
+
+
+  // Blob 转化为 ArrayBuffer
+  // var blob = new Blob(["\x01\x02\x03\x04"]),
+  //   fileReader = new FileReader(),
+  //   array;
+  // fileReader.onload = function() {
+  //   array = this.result;
+  //   console.log(array)
+  //   console.log("Array contains", array.byteLength, "bytes.");
+  // };
+  // fileReader.readAsArrayBuffer(blob);
+
+
+
+  // ArrayBuffer 转化为 Bobl
+
+  // var array = new Uint8Array([0x01, 0x02, 0x03, 0x04])
+  // var blob = new Blob(array);
+  //
+  // console.log(blob);
+
+
+  //blob:http://localhost:63342/aeb2a626-46fe-4579-b8fc-d578f6a67f2b
+  // http://localhost/touxiang.png
+</script>
+</body>
+</html>
