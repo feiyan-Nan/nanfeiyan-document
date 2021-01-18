@@ -12,8 +12,7 @@
   </style>
 </head>
 <body>
-<a
-  href='https://www.baidu.com/s/we?wd=nba&rsv_spt=1&rsv_iqid=0xb224b5df002d2ff6&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=0&rsv_dl=tb&rsv_sug3=6&rsv_sug1=5&rsv_sug7=101&rsv_btype=i&prefixsug=nba&rsp=0&inputT=6735&rsv_sug4=6735'></a>
+<button id='downloadBtn'>文件下载</button>
 <textarea cols='30' id='textarea' name='article' rows='10'></textarea>
 </body>
 <!--坚强冷漠的人总是没有朋友-->
@@ -22,11 +21,41 @@
   // const a = [];
   let name = 'nanfeiyan';
   const work = '程序员';
-  console.log(`姓名${name}, 工作：${work}dd`);
-  let myBlobParts = ['<html><h2>Hello Semlinker</h2></html>'];
-  let myBlob = new Blob(myBlobParts, {
-    type: 'text/html', endings: 'transparent'
+  console.log(tag`姓名${name}, 工作：${work}dd`);
+
+  function tag(strings, ...params) {
+    console.log(strings, params);
+    return 'nanfeiyan';
+  }
+
+  function download(fileName, blob) {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(link.href);
+  }
+
+  const downloadBtn = document.querySelector('#downloadBtn');
+
+  downloadBtn.addEventListener('click', (e) => {
+    const fileName = 'blob.txt';
+    const myBlob = new Blob(['南飞雁你要加油呀！'], { type: 'text/plain' });
+    const fileReader = new FileReader();
+    fileReader.onload = function(e) {
+      console.log(e);
+      console.log(fileReader.result);
+      console.log(fileReader.result.toString());
+      console.log(fileReader.result.toLocaleString());
+    }
+    fileReader.readAsArrayBuffer(myBlob)
+    // download(fileName, myBlob);
   });
-  console.log(myBlob.slice(0, 10).arrayBuffer());
+  // let myBlobParts = ['<html><h2>Hello Semlinker</h2></html>'];
+  // let myBlob = new Blob(myBlobParts, {
+  //   type: 'text/html', endings: 'transparent'
+  // });
+  // console.log(myBlob.slice(0, 10).arrayBuffer());
 </script>
 </html>
