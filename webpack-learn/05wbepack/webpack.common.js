@@ -1,12 +1,14 @@
-const path = require('path');
+const { resolve, join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dayjs = require('dayjs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
+const resolveToStaticPath = (relativePath) => resolve(__dirname, relativePath);
 module.exports = {
   entry: './src/index.js',
   output: {
     // 输出的文件夹只能是绝对路径
-    path: path.join(__dirname, 'dist'),
+    path: join(__dirname, 'dist'),
     // name是entry名字默认为main，
     filename: '[name].[hash:8].js',
   },
@@ -19,6 +21,10 @@ module.exports = {
     ],
   },
   plugins: [
+    // 用来自动向模块内部注入变量,这样做就不需要每个去引入
+    new webpack.ProvidePlugin({
+      _: 'lodash',
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[chunkhash:8].css',
       chunkFilename: 'css/[id].[chunkhash:8].css',
@@ -30,10 +36,17 @@ module.exports = {
       inject: 'body',
       hash: true, // 给引入的资源加上hash（?axcoe），防止缓冲
       // version: `${pkg.version}`,
-      publishDate: `${dayjs().format('YYYY-MM-DD HH:mm:ss')}`,
+      publish: `${dayjs().format('YYYY-MM-DD HH:mm:ss')}`,
       // 排除 themes.js
       // excludeChunks: [...Object.keys(require('./config/themes.config')), 'mobile'],
       minify: false,
     }),
   ],
+  resolve: {
+    // import 的时候自动找 .ts .tsx .js .json 的后缀
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      '@': resolveToStaticPath('./src'),
+    },
+  },
 };
