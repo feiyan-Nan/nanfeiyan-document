@@ -98,9 +98,21 @@ console.log(fn1(1, 2));
 
 
 # webpack
+
 webpack要使用tree-shaking功能必须采用ES6 Module规范（ES6 Module可以静态分析）
 
-*
+* require.resolve() 查找某个模块的相对路径`require.resolve('jquery')`
 
 
+什么叫preset(预设)，预设是插件(plugin)的集合
+
+
+热加载
+
+
+webpack懒加载就是通过ES7的`import语法`
+
+
+### tapable
+webpack 本质上是一种事件流机制，他的工作流程就是将各个插件串联起来，而实现这一切的核心就是tapable
 

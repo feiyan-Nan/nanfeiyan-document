@@ -21,7 +21,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // 用来自动向模块内部注入变量,这样做就不需要每个去引入
+    // 用来自动向模块内部注入变量,这样做就不需要每个去引不需要每个去引入
     new webpack.ProvidePlugin({
       _: 'lodash',
     }),
