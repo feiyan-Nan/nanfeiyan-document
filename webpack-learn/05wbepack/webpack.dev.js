@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const { join } = require('path');
 const common = require('./webpack.common.js');
+const CompilationPlugin = require('./CompilationPlugin');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -12,5 +13,5 @@ module.exports = merge(common, {
     open: true,
   },
   module: {},
-  plugins: [],
+  plugins: [new CompilationPlugin()],
 });

@@ -4,6 +4,8 @@ const dayjs = require('dayjs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const resolveToStaticPath = (relativePath) => resolve(__dirname, relativePath);
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -21,6 +23,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     // 用来自动向模块内部注入变量,这样做就不需要每个去引不需要每个去引入
     new webpack.ProvidePlugin({
       _: 'lodash',
