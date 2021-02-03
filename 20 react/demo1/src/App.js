@@ -1,18 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import DataProvider from './components/DataProvider';
+
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setCount(count + 1);
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  return <h1>{count}</h1>;
+  return (
+    <div>
+      <Router>
+        <DataProvider
+          render={(data) => {
+            return <div>{data.target}</div>;
+          }}
+        >
+          nanfeiyan
+        </DataProvider>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

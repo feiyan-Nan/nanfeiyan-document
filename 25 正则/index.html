@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <style>
+    #textarea {
+      width: 200px;
+      height: 100px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+<button id='downloadBtn'>文件下载</button>
+<textarea cols='30' id='textarea' name='article' rows='10'></textarea>
+</body>
+<!--坚强冷漠的人总是没有朋友-->
+<script type='text/javascript'>
+  // 量词后面加问号表示惰性
+  // const a = [];
+  let name = 'nanfeiyan';
+  const work = '程序员';
+  console.log(tag`姓名${name}, 工作：${work}dd`);
+
+  function tag(strings, ...params) {
+    console.log(strings, params);
+    return 'nanfeiyan';
+  }
+
+  function download(fileName, blob) {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(link.href);
+  }
+
+  const downloadBtn = document.querySelector('#downloadBtn');
+
+  downloadBtn.addEventListener('click', (e) => {
+    const fileName = 'blob.txt';
+    const myBlob = new Blob(['南飞雁你要加油呀！'], { type: 'text/plain' });
+    const fileReader = new FileReader();
+    fileReader.onload = function(e) {
+      console.log(e);
+      console.log(fileReader.result);
+      console.log(fileReader.result.toString());
+      console.log(fileReader.result.toLocaleString());
+    }
+    fileReader.readAsArrayBuffer(myBlob)
+    // download(fileName, myBlob);
+  });
+  // let myBlobParts = ['<html><h2>Hello Semlinker</h2></html>'];
+  // let myBlob = new Blob(myBlobParts, {
+  //   type: 'text/html', endings: 'transparent'
+  // });
+  // console.log(myBlob.slice(0, 10).arrayBuffer());
+</script>
+</html>

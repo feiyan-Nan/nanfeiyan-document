@@ -4,36 +4,25 @@
   <meta charset="UTF-8"/>
   <title>Title</title>
   <style type="text/css">
+    .fullscreen-layout {
+      height: 100vh;
+    }
   </style>
 </head>
 <body>
-<div class="test">
-  <table border="1" style="border-collapse: collapse">
-    <tr>
-      <th></th>
-
-      <th>Name</th>
-      <th>Telephone</th>
-    </tr>
-    <tr>
-      <td>Bill Gates</td>
-      <td>555 77 854</td>
-      <td>555 77 855</td>
-    </tr>
-  </table>
+<div class="fullscreen-layout">
+  <header></header>
+  <main></main>
+  <footer></footer>
 </div>
 
 <script type="text/javascript">
-  let a = ['a', [1, 2], [3, 4], [5, 6]]
-  let result = []
-  for (let val of a) {
-    if(Array.isArray(val)) {
-      val.length
-    }else {
-      result.push(val)
-    }
-    return result
-  }
+  // 获取时间戳
+  console.log(Date.now());
+  console.log(new Date().getTime())
+  console.log(new Date().valueOf())
+  console.log(new Date() * 1)
+  console.log(Number(new Date()))
 </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+<input onchange='fileChange(this)' type='file'>
+<img id='previewContainer' src=''>
+<a download="hello.txt" href='#' id="link">Download</a>
+<script>
+  window.onerror = function(message, url, line, col, error) {
+    console.log(`${message}\n At ${line}:${col} of ${url}`);
+  };
+
+  function readData() {
+    badFunc(); // 啊，出问题了！
+  }
+
+
+
+  readData();
+</script>
+</body>
+</html>
