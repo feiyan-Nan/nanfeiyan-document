@@ -8,17 +8,32 @@
 </head>
 <body>
 <div class="test">
-  <input type="text" name="username"/>
-  <input type="text" name="age"/>
+  <table border="1" style="border-collapse: collapse">
+    <tr>
+      <th></th>
+
+      <th>Name</th>
+      <th>Telephone</th>
+    </tr>
+    <tr>
+      <td>Bill Gates</td>
+      <td>555 77 854</td>
+      <td>555 77 855</td>
+    </tr>
+  </table>
 </div>
 
 <script type="text/javascript">
-  // 获取时间戳
-  console.log(Date.now());
-  console.log(new Date().getTime())
-  console.log(new Date().valueOf())
-  console.log(new Date() * 1)
-  console.log(Number(new Date()))
+  let a = ['a', [1, 2], [3, 4], [5, 6]]
+  let result = []
+  for (let val of a) {
+    if(Array.isArray(val)) {
+      val.length
+    }else {
+      result.push(val)
+    }
+    return result
+  }
 </script>
 </body>
 </html>
