@@ -121,3 +121,66 @@ webpack 本质上是一种事件流机制，他的工作流程就是将各个插
 1. 首先会检查本地缓存是否缓存了该资源，如果有缓存资源，那直接返回资源给浏览器进程
 2. 如果缓存中没有，进行DNS解析（先查找本地host，再到网络上的DNS递归的进行查找，直到查找到根DNS服务器）
 3.
+
+# React
+
+`ReactDOM.render()`只会更新变化的dom节点，所以说react性能高
+
+`ReactDOM.render()`中每次都会传入一个不可变元素，但是他是怎么实现**局部**更新的
+
+受控组件： 输入框显示的值由state控制
+
+
+
+
+
+路走的久了，人往往会迷失－－只知道走，却忘了要往哪儿走，为什么要往那走。
+
+大家似乎都在忙，我们可能花一个小时甚至更久和朋友打电话，却很难面对面的聊五分钟。
+
+我们到底在追寻一种什么东西呢？
+
+THML5的新特性：
+1. 语义化标签: 让合适的标签做合适的事情  header footer  article aside  nav section（定义文档中的节） time
+2. 音视频处理
+3. canvas/webGL
+4. history Api (单页应用)
+5. requestAnimationFrame
+6. 地理位置
+7. web socket
+8. ......
+
+
+
+
+
+代码的优化空间是很小的，大部分的优化都在网络通讯层优化 强缓存和协商缓存
+
+
+
+`requestAnimationFrame`浏览器渲染的下一帧
+
+
+
+水平居中方案：
+1. position+margin负值，
+2. 定位之后上下左右都是0 margin: auto;
+3. position + transform: translate
+
+
+Tomcat本身是用java开发的，所以要想跑java代码，运行了Tomcat，相关的java代码就能运行
+
+JDK里面包含了JVM
+
+
+路由器里面集成了小型的交换机
+
+
+
+人会在一段时间里陷入到自己到怪圈中，走不出来，觉得什么都是自己的问题
+
+
+
+需要得知对方的IP地址
+
+数据包中的数据： 源IP和目标IP， 源MAC地址，目标MAC地址
