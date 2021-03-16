@@ -179,8 +179,84 @@ JDK里面包含了JVM
 
 人会在一段时间里陷入到自己到怪圈中，走不出来，觉得什么都是自己的问题
 
-
+25的我已经感受到中年危机了，我总活在未来，不快乐的现在，可是我一个人的时候就是无法不想未来啊
 
 需要得知对方的IP地址
 
 数据包中的数据： 源IP和目标IP， 源MAC地址，目标MAC地址
+
+
+`ping`对方的时候我们就会用ICMP协议
+
+
+```docker
+docker commit [容器id] [镜像名]
+
+docker exec -it [容器id] bash  进入容器
+
+docker rmi
+```
+
+
+```js
+// 判断是不是移动端窗口
+const isMobileView = () =>
+  window.matchMedia('screen and (max-width: 575px)').matches;
+
+export default isMobileView;
+```
+
+指数操作符
+```js
+console.log(2 ** 10)    //1024
+console.log(2 ** 5)   //32
+```
+
+
+
+可选链操作符`( ?. )`允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。
+
+空值合并操作符（??）是一个逻辑操作符，当左侧的操作数为 null 或者 undefined 时，返回其右侧操作数，否则返回左侧操作数。
+
+
+
+
+
+// 泛型函数
+function identity<T>(value: T): T {
+return value;
+}
+
+identity<string>('2');
+identity<number>('2');
+
+function f<T, U>(value: T, message: U): T {
+console.log(message);
+return value;
+}
+
+f<number, string>(1, 'q');
+
+// 泛型接口
+interface IndexPageProps<T, S> {
+name: T;
+age: S;
+}
+
+interface Length {
+length: number;
+}
+
+function f1<T extends Length>(arg: T): T {
+console.log(arg.length);
+return arg;
+}
+
+f1(68);
+
+interface Abort<T = number> {
+name: T;
+}
+
+const abort: Abort = { name: 2 };
+const abort1: Abort<string> = { name: '2' };
