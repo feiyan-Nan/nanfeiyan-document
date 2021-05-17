@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/33CSS-Modules/css-modules-demos" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/webpack-learn/07babel-plugin/babel-plugin" vcs="Git" />
   </component>
 </project>

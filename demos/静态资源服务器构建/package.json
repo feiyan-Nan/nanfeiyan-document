@@ -1,7 +1,0 @@
-{
-  "name": "static",
-  "version": "",
-  "devDependencies": {
-    "chalk": "^2.4.2"
-  }
-}
