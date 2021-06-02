@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+/**
+ * asdf
+ * @constructor
+ */
 function App() {
+  const [state, setState] = useState({ name: '南飞雁' });
+  fetch('http://localhost:3004/posts')
+    .then(async (res) => {
+      return await res.json();
+    })
+    .then((res) => console.log(res));
   return (
     <div className="App">
       <header className="App-header">
