@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e1c194b3-1e00-4b3f-9a7a-c2246391f98e" name="Default Changelist" comment="feat: 添加测试代码" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_COMMON_BRANCH" value="master" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1617244553" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/33CSS-Modules/css-modules-demos" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="react" />
+                    <option name="lastUsedInstant" value="1621239864" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1621239863" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/webpack-learn/07babel-plugin/babel-plugin" />
+            </RecentBranchesForRepo>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="react" />
+                    <option name="lastUsedInstant" value="1621239865" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1621239864" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/classList.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ce.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1fE96dkabwzntFOx37wzGbs0tqu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.5.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.37" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/32UmiJS-react/myapp/src/pages" />
+      <recent name="$PROJECT_DIR$/32UmiJS-react/myapp/src" />
+      <recent name="$PROJECT_DIR$/32UmiJS-react/myapp/src/components/MenuBar" />
+      <recent name="$PROJECT_DIR$/32UmiJS-react/myapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/32UmiJS-react/myapp/src/pages" />
+      <recent name="$PROJECT_DIR$/docker/src" />
+      <recent name="$PROJECT_DIR$/webpack-learn/05wbepack" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.mock">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="mock" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="mock" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prepare" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prepare" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/jira/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.mock" />
+        <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.prepare" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e1c194b3-1e00-4b3f-9a7a-c2246391f98e" name="Default Changelist" comment="" />
+      <created>1595772210543</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595772210543</updated>
+      <workItem from="1595772211775" duration="432000" />
+      <workItem from="1596964362604" duration="27000" />
+      <workItem from="1596964400646" duration="851000" />
+      <workItem from="1596965263304" duration="608000" />
+      <workItem from="1598019451839" duration="335000" />
+      <workItem from="1598234476748" duration="247000" />
+      <workItem from="1600346353206" duration="1916000" />
+      <workItem from="1600394166134" duration="1406000" />
+      <workItem from="1600395780133" duration="1591000" />
+      <workItem from="1600432203275" duration="386000" />
+      <workItem from="1602988020207" duration="213000" />
+      <workItem from="1603176478042" duration="3382000" />
+      <workItem from="1603245033638" duration="372000" />
+      <workItem from="1603349751480" duration="6796000" />
+      <workItem from="1603417745793" duration="988000" />
+      <workItem from="1603543624810" duration="615000" />
+      <workItem from="1603591728213" duration="1927000" />
+      <workItem from="1603677566530" duration="312000" />
+      <workItem from="1603706343057" duration="1922000" />
+      <workItem from="1603763734593" duration="281000" />
+      <workItem from="1603779278811" duration="929000" />
+      <workItem from="1603850377198" duration="521000" />
+      <workItem from="1603851484036" duration="13000" />
+      <workItem from="1604041352058" duration="6393000" />
+      <workItem from="1604066239766" duration="1129000" />
+      <workItem from="1606208971317" duration="1466000" />
+      <workItem from="1606268671743" duration="2226000" />
+      <workItem from="1606375842815" duration="2612000" />
+      <workItem from="1606529481631" duration="2673000" />
+      <workItem from="1606701489175" duration="768000" />
+      <workItem from="1606707437370" duration="4702000" />
+      <workItem from="1606739764424" duration="3377000" />
+      <workItem from="1607064528400" duration="1054000" />
+      <workItem from="1607069756872" duration="9275000" />
+      <workItem from="1607089702152" duration="2380000" />
+      <workItem from="1607242667892" duration="1275000" />
+      <workItem from="1607312422635" duration="6133000" />
+      <workItem from="1607340518528" duration="37897000" />
+      <workItem from="1607911068856" duration="36000" />
+      <workItem from="1607911123736" duration="14306000" />
+      <workItem from="1608038546160" duration="507000" />
+      <workItem from="1608107319322" duration="646000" />
+      <workItem from="1608119330171" duration="3711000" />
+      <workItem from="1608207498286" duration="982000" />
+      <workItem from="1608262179629" duration="17235000" />
+      <workItem from="1608607715560" duration="114000" />
+      <workItem from="1608607873182" duration="479000" />
+      <workItem from="1608615487960" duration="734000" />
+      <workItem from="1608617830331" duration="4003000" />
+      <workItem from="1608861381565" duration="597000" />
+      <workItem from="1609052622962" duration="4597000" />
+      <workItem from="1609119337506" duration="2867000" />
+      <workItem from="1609142118378" duration="4798000" />
+      <workItem from="1609303867636" duration="8451000" />
+      <workItem from="1609586073075" duration="6000" />
+      <workItem from="1609586122482" duration="1841000" />
+      <workItem from="1609832972057" duration="319000" />
+      <workItem from="1609833346366" duration="18390000" />
+      <workItem from="1609982693423" duration="8921000" />
+      <workItem from="1610596035141" duration="29780000" />
+      <workItem from="1610934762681" duration="7252000" />
+      <workItem from="1611193999325" duration="258000" />
+      <workItem from="1611214892816" duration="5023000" />
+      <workItem from="1611284604701" duration="10719000" />
+      <workItem from="1611539734323" duration="445000" />
+      <workItem from="1611542277672" duration="13250000" />
+      <workItem from="1611655327771" duration="262000" />
+      <workItem from="1611655612116" duration="1003000" />
+      <workItem from="1611712921864" duration="13761000" />
+      <workItem from="1611885268539" duration="5207000" />
+      <workItem from="1611903502404" duration="138000" />
+      <workItem from="1611903658013" duration="2585000" />
+      <workItem from="1611915488553" duration="2171000" />
+      <workItem from="1612162710090" duration="6380000" />
+      <workItem from="1612232090544" duration="356000" />
+      <workItem from="1612232570117" duration="1026000" />
+      <workItem from="1613027023055" duration="9270000" />
+      <workItem from="1613613370747" duration="612000" />
+      <workItem from="1613616178619" duration="7714000" />
+      <workItem from="1613792245791" duration="5308000" />
+      <workItem from="1613877931294" duration="17824000" />
+      <workItem from="1614222898699" duration="2529000" />
+      <workItem from="1614232493678" duration="15641000" />
+      <workItem from="1614563869342" duration="6800000" />
+      <workItem from="1614650887641" duration="3507000" />
+      <workItem from="1614823089291" duration="342000" />
+      <workItem from="1615170914974" duration="20806000" />
+      <workItem from="1615530718711" duration="4158000" />
+      <workItem from="1615772975459" duration="311000" />
+      <workItem from="1615773626026" duration="31833000" />
+      <workItem from="1615946119965" duration="701000" />
+      <workItem from="1615946866300" duration="69049000" />
+      <workItem from="1616378150106" duration="4475000" />
+      <workItem from="1616404681056" duration="18851000" />
+      <workItem from="1616551652914" duration="12747000" />
+      <workItem from="1616575978756" duration="8049000" />
+      <workItem from="1616656357405" duration="12496000" />
+      <workItem from="1616982591914" duration="112000" />
+      <workItem from="1617082481279" duration="45880000" />
+      <workItem from="1617673968099" duration="93000" />
+      <workItem from="1617848543748" duration="699000" />
+      <workItem from="1617851590826" duration="1879000" />
+      <workItem from="1617951765303" duration="15224000" />
+      <workItem from="1618192920872" duration="190000" />
+      <workItem from="1618193350892" duration="106000" />
+      <workItem from="1618193493412" duration="468000" />
+      <workItem from="1618194075086" duration="1143000" />
+      <workItem from="1618196246019" duration="43279000" />
+      <workItem from="1618469734149" duration="16556000" />
+      <workItem from="1618664436409" duration="3237000" />
+      <workItem from="1618796885860" duration="7220000" />
+      <workItem from="1618815360738" duration="1358000" />
+      <workItem from="1618828881431" duration="6936000" />
+      <workItem from="1619144317402" duration="3125000" />
+      <workItem from="1619160406270" duration="11894000" />
+      <workItem from="1619180458246" duration="1086000" />
+      <workItem from="1620358145581" duration="2594000" />
+      <workItem from="1621239820218" duration="2960000" />
+      <workItem from="1621325343467" duration="3462000" />
+      <workItem from="1621402098837" duration="9741000" />
+      <workItem from="1621576113256" duration="37000" />
+      <workItem from="1621922682496" duration="1464000" />
+      <workItem from="1622605687997" duration="1169000" />
+    </task>
+    <task id="LOCAL-00001" summary="图片预览">
+      <created>1607503067258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607503067258</updated>
+    </task>
+    <task id="LOCAL-00002" summary="koa-learn">
+      <created>1607679151494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607679151494</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: 添加git提交规范">
+      <created>1621402730636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621402730636</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 添加测试代码">
+      <created>1622605967643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622605967643</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="图片预览" />
+    <MESSAGE value="koa-learn" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="fix: 添加git提交规范" />
+    <MESSAGE value="feat: 添加测试代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加测试代码" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/nanfeiyan_document$ce_html.dat" NAME="ce.html Coverage Results" MODIFIED="1616408265213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/nanfeiyan_document$index_html__2_.dat" NAME="index.html (2) Coverage Results" MODIFIED="1609056163664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/nanfeiyan_document$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1608119878510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/nanfeiyan_document$css_skill_html.dat" NAME="css-skill.html Coverage Results" MODIFIED="1607322659988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
