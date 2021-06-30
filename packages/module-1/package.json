@@ -1,0 +1,29 @@
+{
+  "name": "module-1",
+  "version": "1.0.0",
+  "description": "包一",
+  "keywords": [
+    "包一"
+  ],
+  "author": "nanfeiyan <guigong.li@mail.hypers.com>",
+  "homepage": "https://github.com/nanfeiyan123/nanfeiyan-document#readme",
+  "license": "ISC",
+  "main": "lib/module-1.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanfeiyan123/nanfeiyan-document.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/nanfeiyan123/nanfeiyan-document/issues"
+  }
+}

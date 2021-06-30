@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1c194b3-1e00-4b3f-9a7a-c2246391f98e" name="Default Changelist" comment="feat: 添加测试代码" />
+    <list default="true" id="e1c194b3-1e00-4b3f-9a7a-c2246391f98e" name="Default Changelist" comment="feat: 添加测试代码">
+      <change afterPath="$PROJECT_DIR$/ce.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +44,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="react" />
+      </map>
+    </option>
     <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
@@ -88,6 +97,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="lerna" />
+                    <option name="lastUsedInstant" value="1622785494" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="react" />
                     <option name="lastUsedInstant" value="1621239865" />
                   </RecentBranch>
@@ -105,9 +118,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/index.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/classList.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ce.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -347,6 +358,9 @@
       <workItem from="1621576113256" duration="37000" />
       <workItem from="1621922682496" duration="1464000" />
       <workItem from="1622605687997" duration="1169000" />
+      <workItem from="1622785475305" duration="2197000" />
+      <workItem from="1622813813232" duration="1235000" />
+      <workItem from="1623048963973" duration="6988000" />
     </task>
     <task id="LOCAL-00001" summary="图片预览">
       <created>1607503067258</created>
