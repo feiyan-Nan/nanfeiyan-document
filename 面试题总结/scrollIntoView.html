@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    ul > li {
+      height: 100px;
+      border-bottom: 1px solid #000000;
+      line-height: 100px;
+      display: inline-block;
+      width: 100%;
+    }
+
+    #demo {
+      background-color: #f00;
+    }
+  </style>
+</head>
+<body>
+<button onclick="fun()">跳转</button>
+<div class="box" style="width: 300px; height: 300px; border: 1px solid #000; overflow: auto">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li id="demo">13</li>
+    <li><a href="#" id="demo1" style="color: #00ff00">demo</a></li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li>
+    <li>20</li>
+  </ul>
+</div>
+</body>
+<script type='text/javascript'>
+  function fun() {
+    var demo = document.getElementById('demo');
+    demo.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
+
+  // /^.*(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[~!@#$%^&*()\[\]{}?\\+,])\w{6,16}$/.test('asdDf3!asdDf3!asdDf3!asdDf3!')
+  // /^.*(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*?])\w{6,}/.test('asdDf3!asdDf3!asdDf3!asdDf3!')
+  // /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*()\[\]{}?\\+,])[^]{6,16}$/.test('aF12z333')
+  function f(value) {
+    return (/[a-z]/.test(value) && /[A-Z]/.test(value) && /[0-9]/.test(value))
+  }
+
+  console.log(f('nanfeiyan34'));
+
+
+  let a = {
+    age: 23,
+    name: 'nanfeiyan',
+    say: function () {
+      console.log(23)
+    },
+  }
+  let b = {
+    name: 'nanfeiyan',
+    age: 23,
+    say: function () {
+      console.log(23)
+    }
+  }
+  console.log(JSON.stringify(a))
+  console.log(JSON.stringify(a) === JSON.stringify(b))
+  console.log(Object.is(a) === Object.is(b))
+
+</script>
+</html>

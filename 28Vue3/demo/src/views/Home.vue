@@ -1,18 +1,45 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div>{{ count }}变为为两倍{{double}}</div>
+    <div>{{ name }}</div>
+    <button @click="addCount">加</button>
+    <button @click="personChange">改person</button>
+    <img alt="Vue logo" src="../assets/logo.png"/>
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import {defineComponent, ref, computed, reactive, toRefs} from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 export default defineComponent({
   name: 'Home',
   components: {
     HelloWorld
+  },
+  setup() {
+    const count = ref(0)
+    const addCount = () => {
+      count.value++
+    }
+    const double = computed(() => count.value * 2)
+    const person = reactive(
+      {
+        name: 'nanfeiyan',
+        age: 24,
+        personChange() {
+          person.name = 'xiaopohai'
+          person.age = 25
+        }
+      }
+    )
+    return {
+      count,
+      addCount,
+      double,
+      ...toRefs(person)
+    }
   }
 });
 </script>
