@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type='text/javascript'>
+  let produce = {
+    price: 10,
+    count: 2
+  }
+  const effect = () => {
+    total = produce.count * produce.price
+  }
+  let total = 0
+  let dep = new Set()
+
+  function track() {
+    dep.add(effect)
+  }
+
+  function trigger() {
+    dep.forEach(effect => effect())
+  }
+  const handler = {
+    get() {
+      // console.log('get方法被调用', target, prop, receiver)
+      track()
+      return Reflect.get(...arguments)
+    },
+    set() {
+      // console.log('set方法被调用', target, prop, value, receiver)
+      const result = Reflect.set(...arguments)
+      trigger()
+      return result
+    }
+  }
+  const proxy = new Proxy(produce, handler)
+  console.log(proxy.price);
+  proxy.price = 20
+  console.log(total);
+  console.log(proxy.price)
+
+</script>
+</html>
