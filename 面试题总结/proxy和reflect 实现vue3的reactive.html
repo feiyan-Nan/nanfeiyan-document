@@ -5,7 +5,7 @@
   <title>Title</title>
 </head>
 <body>
-
+<input type="text" style="ime-mode:disabled ">
 </body>
 <script type='text/javascript'>
   let produce = {
@@ -25,6 +25,7 @@
   function trigger() {
     dep.forEach(effect => effect())
   }
+
   const handler = {
     get() {
       // console.log('get方法被调用', target, prop, receiver)
@@ -44,5 +45,99 @@
   console.log(total);
   console.log(proxy.price)
 
+  // const obj = {
+  //   i: 0,
+  //   toString: function () {
+  //     this.i = this.i + 2
+  //     return this.i
+  //   }
+  // }
+  // console.log(obj == 2 && obj == 4 && obj == 6);
+
+
+  // const obj = {
+  //   i: 0,
+  //   valueOf: function () {
+  //     this.i = this.i + 2
+  //     return this.i
+  //   }
+  // }
+  // console.log(obj == 2 && obj == 4 && obj == 6);
+
+  // let val = 0
+  // Object.defineProperty(window, 'a', {
+  //   get() {
+  //     return ++val
+  //   }
+  // })
+  //
+  // console.log(a === 1 && a === 2 && a === 3)
+
+  var aﾠ = 1;
+  var a = 2;
+  var ﾠa = 3;
+
+  // a等于 1
+  // 1等于2
+  // 1等于3
+  // console.log(aﾠ === 1 && a === 2 && ﾠa === 3)  // true
+  console.log(aﾠ == 1 && a == 2 && ﾠa == 3)  // true
+
+
+  let tt = 90
+  let result = (tt = tt + 10, tt)
+  console.log(result);
+
+  // const arr = [1,[2,3],[4,5]]
+  // const flatArr = [].concat(...arr)
+  // console.log(flatArr)//[1, 2, 3, 4, 5]
+
+  // const arr = [1,[2,3],[4,5,[6,7,[8,9]]]]
+  // function flat (arr) {
+  //   let flatArr = [].concat(...arr)
+  //   return flatArr.some(item => Array.isArray(item)) ? flat(flatArr) : flatArr
+  // }
+  // console.log(flat(arr));
+
+
+  // var obj = {
+  //   0: 'qian',
+  //   1: 'long',
+  //   2: 'chu',
+  //   3: 'tian',
+  //   length: 4
+  // }
+  //
+  // console.log(Array.from(obj));
+  // console.log(Array.prototype.slice.call(obj));
+  // console.log([].slice.call(obj));
+  // console.log([].slice.bind(obj)());
+  // console.log([].slice.apply(obj));
+
+  const aa = [1, 2, 3, 4, function () {
+    alert(23)
+  }]
+  // const bb = [1, 2, 3, 4, function () {
+  //   alert(23)
+  // }]
+  const bb = aa
+  function scalarArrayEquals(array1, array2) {
+    return array1.length === array2.length && array1.every(function(v, i) { return v ===array2[i]})
+  }
+
+  console.log(scalarArrayEquals(aa, bb));
+
+  // console.log(JSON.stringify([1, 2, 3, 4, function () {
+  //   alert(23)
+  // }]) === JSON.stringify([1, 2, 3, 4, function () {
+  //   alert(233)
+  // }]));
+
+  const num = 5435435
+  function change (num) {
+    return ++num.toString()[0] + '0'.repeat(num.toString().length-1)
+  }
+
+  console.log(change(num));
 </script>
 </html>

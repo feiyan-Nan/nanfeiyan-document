@@ -26,7 +26,7 @@ ts的编译方式
 ```js
 // getter和setter方法
 const nanfeiyan = {
-  info: { name: 'nanfeiyan', desc: 'developer' },
+  info: {name: 'nanfeiyan', desc: 'developer'},
   get name() {
     return this.info.name;
   },
@@ -130,10 +130,6 @@ webpack 本质上是一种事件流机制，他的工作流程就是将各个插
 
 受控组件： 输入框显示的值由state控制
 
-
-
-
-
 路走的久了，人往往会迷失－－只知道走，却忘了要往哪儿走，为什么要往那走。
 
 大家似乎都在忙，我们可能花一个小时甚至更久和朋友打电话，却很难面对面的聊五分钟。
@@ -141,7 +137,8 @@ webpack 本质上是一种事件流机制，他的工作流程就是将各个插
 我们到底在追寻一种什么东西呢？
 
 THML5的新特性：
-1. 语义化标签: 让合适的标签做合适的事情  header footer  article aside  nav section（定义文档中的节） time
+
+1. 语义化标签: 让合适的标签做合适的事情 header footer article aside nav section（定义文档中的节） time
 2. 音视频处理
 3. canvas/webGL
 4. history Api (单页应用)
@@ -150,32 +147,21 @@ THML5的新特性：
 7. web socket
 8. ......
 
-
-
-
-
 代码的优化空间是很小的，大部分的优化都在网络通讯层优化 强缓存和协商缓存
-
-
 
 `requestAnimationFrame`浏览器渲染的下一帧
 
-
-
 水平居中方案：
+
 1. position+margin负值，
 2. 定位之后上下左右都是0 margin: auto;
 3. position + transform: translate
-
 
 Tomcat本身是用java开发的，所以要想跑java代码，运行了Tomcat，相关的java代码就能运行
 
 JDK里面包含了JVM
 
-
 路由器里面集成了小型的交换机
-
-
 
 人会在一段时间里陷入到自己到怪圈中，走不出来，觉得什么都是自己的问题
 
@@ -185,9 +171,7 @@ JDK里面包含了JVM
 
 数据包中的数据： 源IP和目标IP， 源MAC地址，目标MAC地址
 
-
 `ping`对方的时候我们就会用ICMP协议
-
 
 ```docker
 docker commit [容器id] [镜像名]
@@ -196,7 +180,6 @@ docker exec -it [容器id] bash  进入容器
 
 docker rmi
 ```
-
 
 ```js
 // 判断是不是移动端窗口
@@ -207,56 +190,172 @@ export default isMobileView;
 ```
 
 指数操作符
+
 ```js
 console.log(2 ** 10)    //1024
 console.log(2 ** 5)   //32
 ```
 
-
-
 可选链操作符`( ?. )`允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。
 
 空值合并操作符（??）是一个逻辑操作符，当左侧的操作数为 null 或者 undefined 时，返回其右侧操作数，否则返回左侧操作数。
 
+使用对象解构将数组项赋值给变量：
 
+```js
+const str = "1997,kangkang,boy,23"
+const {1: name, 2: sex, 0: age} = str.split(',')
+console.log(name, sex, age) //kangkang boy 1997
+```
 
+注：本例中，2 为 split 之后的数组下标，sex 为指定的变量，值为 boy
 
+创建一个空对象不带任何属性和方法 const obj = {} const obj1 = Object.create(null) //这个对象不会继承Object的任何属性和方法 console.log(obj, obj1);
 
-// 泛型函数
-function identity<T>(value: T): T {
-return value;
+(a ==2 && a== 4 && a==6) 怎么为 true
+
+```js
+// 方法一
+const obj = {
+  i: 0,
+  toString: function () {
+    this.i = this.i + 2
+    return this.i
+  }
+}
+console.log(obj == 2 && obj == 4 && obj == 6);
+
+// 方法二
+const obj = {
+  i: 0,
+  valueOf: function () {
+    this.i = this.i + 2
+    return this.i
+  }
+}
+console.log(obj == 2 && obj == 4 && obj == 6);
+```
+
+(a === 2 && a === 4 && a === 6) 怎么为 true
+
+```js
+let val = 0
+Object.defineProperty(window, 'a', {
+  get() {
+    return ++val
+  }
+})
+
+console.log(a === 1 && a === 2 && a === 3)  // true
+```
+
+同时申明多个变量(目前还不能很好的解释)
+
+```js
+var aﾠ = 1;
+var a = 2;
+varﾠa = 3;
+console.log(aﾠ == 1 && a == 2 && ﾠa == 3)  // true
+console.log(aﾠ === 1 && a === 2 && ﾠa === 3)  // true
+```
+
+最简单的清空和截短数组的方法就是改变 length 属性
+
+```js
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+arr.length = 5
+console.log(arr)//[1,2,3,4,5]
+arr.length = 0//清空数组
+```
+
+逗号运算符 `逗号运算符是二元运算符，它能够先执行运算符左侧的操作数，然后再执行右侧的操作数，最后返回右侧操作数的值。`
+
+```js
+let x = 1;
+x = (x++, x);
+console.log(x);
+// expected output: 2
+x = (2, 3);
+console.log(x);
+// expected output: 3
+```
+
+使用扩展运算符可以快速扁平化二维数组：
+
+```js
+const arr = [1, [2, 3], [4, 5]]
+const flatArr = [].concat(...arr)
+console.log(flatArr)//[1, 2, 3, 4, 5]
+```
+
+不幸的是，上面的技巧只能适用二维数组，但是使用递归，我们可以扁平化任意纬度数组：
+
+```js
+const arr = [1, [2, 3], [4, 5, [6, 7, [8, 9]]]]
+
+function flat(arr) {
+  let flatArr = [].concat(...arr)
+  return flatArr.some(item => Array.isArray(item)) ? flat(flatArr) : flatArr
 }
 
-identity<string>('2');
-identity<number>('2');
+console.log(flat(arr)); // //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
-function f<T, U>(value: T, message: U): T {
-console.log(message);
-return value;
+对象转换为数组
+
+```js
+//注意对象必须是以下格式的才可以通过此方式转化为数组
+//获取的DOM集合，以及函数的arguments也可以通过此方式转化为数组
+var obj = {
+  0: 'qian',
+  1: 'long',
+  2: 'chu',
+  3: 'tian',
+  length: 4
 }
+
+console.log(Array.from(obj));
+console.log(Array.prototype.slice.call(obj));
+console.log([].slice.call(obj));
+console.log([].slice.bind(obj)());
+console.log([].slice.apply(obj));
+```
+
+取消选取、防止复制
+
+```js
+<body onselectstart="return false">
+  // JS不允许粘贴
+  // onpaste=”return false”
+  // JS防止复制
+  // oncopy=”return false;” oncut=”return false;”
+  // 防止被人 frame
+  // if (top.location != self.location)top.location=self.location;
+  // 网页禁用另存为
+  // '<no>< iframe src=*.html>< /iframe></no>'
+// 禁用输入法
+```
+
+
+
+
+
+// 泛型函数 function identity<T>(value: T): T { return value; }
+
+identity<string>('2'); identity<number>('2');
+
+function f<T, U>(value: T, message: U): T { console.log(message); return value; }
 
 f<number, string>(1, 'q');
 
-// 泛型接口
-interface IndexPageProps<T, S> {
-name: T;
-age: S;
-}
+// 泛型接口 interface IndexPageProps<T, S> { name: T; age: S; }
 
-interface Length {
-length: number;
-}
+interface Length { length: number; }
 
-function f1<T extends Length>(arg: T): T {
-console.log(arg.length);
-return arg;
-}
+function f1<T extends Length>(arg: T): T { console.log(arg.length); return arg; }
 
 f1(68);
 
-interface Abort<T = number> {
-name: T;
-}
+interface Abort<T = number> { name: T; }
 
-const abort: Abort = { name: 2 };
-const abort1: Abort<string> = { name: '2' };
+const abort: Abort = { name: 2 }; const abort1: Abort<string> = { name: '2' };
