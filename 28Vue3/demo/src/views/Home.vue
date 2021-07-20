@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>{{ count }}变为为两倍{{double}}</div>
+    <div>{{ count }}变为为两倍{{ double }}</div>
     <div>{{ name }}</div>
     <button @click="addCount">加</button>
     <button @click="personChange">改person</button>
@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, ref, computed, reactive, toRefs} from 'vue';
+import {computed, defineComponent, reactive, ref, toRefs, watch} from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 
 export default defineComponent({
@@ -23,6 +23,10 @@ export default defineComponent({
     const addCount = () => {
       count.value++
     }
+    watch(count, (newValue, oldValue) => {
+      console.log(newValue, oldValue);
+      console.log(count.value)
+    })
     const double = computed(() => count.value * 2)
     const person = reactive(
       {

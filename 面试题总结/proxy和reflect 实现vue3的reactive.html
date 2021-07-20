@@ -5,7 +5,7 @@
   <title>Title</title>
 </head>
 <body>
-<input type="text" style="ime-mode:disabled ">
+<input style="ime-mode:disabled " type="text">
 </body>
 <script type='text/javascript'>
   let produce = {
@@ -100,13 +100,13 @@
   // console.log(flat(arr));
 
 
-  // var obj = {
-  //   0: 'qian',
-  //   1: 'long',
-  //   2: 'chu',
-  //   3: 'tian',
-  //   length: 4
-  // }
+  var obj = {
+    0: 'qian',
+    1: 'long',
+    2: 'chu',
+    3: 'tian',
+    length: 4
+  }
   //
   // console.log(Array.from(obj));
   // console.log(Array.prototype.slice.call(obj));
@@ -121,8 +121,11 @@
   //   alert(23)
   // }]
   const bb = aa
+
   function scalarArrayEquals(array1, array2) {
-    return array1.length === array2.length && array1.every(function(v, i) { return v ===array2[i]})
+    return array1.length === array2.length && array1.every(function (v, i) {
+      return v === array2[i]
+    })
   }
 
   console.log(scalarArrayEquals(aa, bb));
@@ -134,10 +137,34 @@
   // }]));
 
   const num = 5435435
-  function change (num) {
-    return ++num.toString()[0] + '0'.repeat(num.toString().length-1)
+
+  function change(num) {
+    return ++num.toString()[0] + '0'.repeat(num.toString().length - 1)
   }
 
   console.log(change(num));
+
+
+  function f(max, segment = 5) {
+    const interval = max / segment
+    return Array.from(Array(segment),(v, k) =>k).map((item, index) => {
+      return [index * interval, (index + 1) * interval]
+    })
+  }
+
+  console.log(f(202, 5));
+  console.log([...['nan', 'fei'].keys()]);
+  console.log(Array.from(['nan', 'fei'].keys()));
+  console.log(Object.keys(obj));
+
+  
+  var foo = 1
+  function bar() {
+    if(!foo) {
+      var foo = 10
+    }
+    console.log(foo);
+  }
+  bar()
 </script>
 </html>
