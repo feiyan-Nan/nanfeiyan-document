@@ -359,3 +359,9 @@ f1(68);
 interface Abort<T = number> { name: T; }
 
 const abort: Abort = { name: 2 }; const abort1: Abort<string> = { name: '2' };
+
+
+
+头痛医头, 脚痛医脚
+
+
