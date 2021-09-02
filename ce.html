@@ -7,12 +7,25 @@
   <meta content='ie=edge' http-equiv='X-UA-Compatible'>
   <title>Document</title>
   <style>
-    #box:active {
-      background: red;
+    #box>p {
+     background-color: blue;
     }
   </style>
 </head>
 <body>
-<div id='box'>hahhh</div>
+<div id='box'>
+  <p>ddd</p>
+  <div><p>ffff</p></div>
+</div>
 </body>
+<script>
+
+  function callback() {
+    console.log('nanfeiyan');
+    // requestAnimationFrame(callback)
+  }
+  callback()
+
+</script>
 </html>
+

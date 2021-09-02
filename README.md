@@ -365,3 +365,11 @@ const abort: Abort = { name: 2 }; const abort1: Abort<string> = { name: '2' };
 头痛医头, 脚痛医脚
 
 
+### 怎么解决spa页面的首屏空白问题: 可以在index.html中
+```js
+<div id="app">
+  <div id='loading'>加载一个loading, 等着spa渲染结束, 会把loading给替换掉</div>
+</div>
+```
+
+
