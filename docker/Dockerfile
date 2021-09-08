@@ -2,7 +2,7 @@
 #COPY ./src ./dist
 #WORKDIR /dist
 #CMD node index.js
-FROM nginx
+FROM nginx:alpine
 COPY ./src /usr/share/nginx/html/
 EXPOSE 80
 

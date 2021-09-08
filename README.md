@@ -26,7 +26,7 @@ ts的编译方式
 ```js
 // getter和setter方法
 const nanfeiyan = {
-  info: {name: 'nanfeiyan', desc: 'developer'},
+  info: { name: 'nanfeiyan', desc: 'developer' },
   get name() {
     return this.info.name;
   },
@@ -204,7 +204,7 @@ console.log(2 ** 5)   //32
 
 ```js
 const str = "1997,kangkang,boy,23"
-const {1: name, 2: sex, 0: age} = str.split(',')
+const { 1: name, 2: sex, 0: age } = str.split(',')
 console.log(name, sex, age) //kangkang boy 1997
 ```
 
@@ -218,7 +218,7 @@ console.log(name, sex, age) //kangkang boy 1997
 // 方法一
 const obj = {
   i: 0,
-  toString: function () {
+  toString: function() {
     this.i = this.i + 2
     return this.i
   }
@@ -228,7 +228,7 @@ console.log(obj == 2 && obj == 4 && obj == 6);
 // 方法二
 const obj = {
   i: 0,
-  valueOf: function () {
+  valueOf: function() {
     this.i = this.i + 2
     return this.i
   }
@@ -332,13 +332,14 @@ console.log([].slice.apply(obj));
   // 防止被人 frame
   // if (top.location != self.location)top.location=self.location;
   // 网页禁用另存为
-  // '<no>< iframe src=*.html>< /iframe></no>'
+  // '
+  <no>
+    < iframe src=*.html>
+  < /iframe>
+</no>
+'
 // 禁用输入法
 ```
-
-
-
-
 
 // 泛型函数 function identity<T>(value: T): T { return value; }
 
@@ -360,16 +361,74 @@ interface Abort<T = number> { name: T; }
 
 const abort: Abort = { name: 2 }; const abort1: Abort<string> = { name: '2' };
 
-
-
 头痛医头, 脚痛医脚
 
-
 ### 怎么解决spa页面的首屏空白问题: 可以在index.html中
+
 ```js
 <div id="app">
   <div id='loading'>加载一个loading, 等着spa渲染结束, 会把loading给替换掉</div>
 </div>
 ```
+
+本地存储 `localStorage`
+
+1. 缓存静态资源文件内筒js/css (百度的M站)
+2. 缓存不常变更的接口数据
+3. 储存位置信息
+4. 浏览在页面的具体位置
+
+
+
+Common.js
+AMD (异步模块定义)  RequireJS
+
+
+http2:
+1. 多路复用
+2. 对头信息进行压缩
+3. 采用二进制格式传输数据
+4. Service push
+
+## Docker的常用命令
+```bash
+docker version    # 显示docker的版本信息
+
+docker info       # 显示docker的系统信息, 包括容器和镜像的信息
+
+docker images     # 显示docker镜像
+
+docker image rmi  镜像id   # 删除某个镜像
+
+docker image rmi -f 镜像id   # 强制删除某个镜像
+
+docker image rmi -f $(docker images -aq)  # 删除全部镜像
+
+
+
+docker run -it centos /bin/bash  # 运行centos镜像, 并以交互模式进入到镜像中(这种`exit`之后, 容器停止运行)
+exit   # 从容器中退出到主机
+
+
+docker ps  # 查看当前正在运行的容器
+docker ps  -a   # 列出所有的容器
+
+### 删除容器
+docker rm  容器的id  # 删除容器
+docker rm  -f $(docker ps -aq) 删除所有容器
+
+### 启动和停止容器的操作
+docker start 容器id   # 启动容器
+docker restart 容器id # 重新启动容器
+docker stop  容器id   # 停止当前正在运行的容器
+docker kill 容器id    # 强制停止当前容器
+
+## 容器启动后, 进去容器, 退出后容器继续运行
+docker exec -it abc29f212590(`容器id`) /bin/bash
+
+docker run -d -p 80:80 nanfeiyan # 后台运行
+```
+
+
 
 
