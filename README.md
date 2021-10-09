@@ -1,6 +1,14 @@
 # nanfeiyan-document
 
+
+## 优质文章记录
+[聊聊 NPM 镜像那些险象环生的坑](https://mp.weixin.qq.com/s/2ntKGIkR3Uiy9cQfITg2NQ)
+
+[一文搞懂peerDependencies](https://segmentfault.com/a/1190000022435060)
 ### [Vue 文章](./docs/Vue.md)
+
+
+npm和yarn的优化一直在向扁平化迈进
 
 ## Object.freeze
 
@@ -424,11 +432,27 @@ docker stop  容器id   # 停止当前正在运行的容器
 docker kill 容器id    # 强制停止当前容器
 
 ## 容器启动后, 进去容器, 退出后容器继续运行
-docker exec -it abc29f212590(`容器id`) /bin/bash
+docker exec -it abc29f212590(`容器id`) /bin/bash   # 启动一个新的进程,重新在里面操作
+docker attach 容器id  #进入正在执行的终端, 不会启动新的进程
 
 docker run -d -p 80:80 nanfeiyan # 后台运行
+```
+### 查看容器中进程信息 ps
+```shell
+docker top 容器id
+
+# 查看容器的一些基本信息
+docker inspect 容器id
+```
+
+### 从容器拷贝文件到主机上
+```shell
+docker cp 容器id:容器内路径  目的主机的路径
 ```
 
 
 
+
+
+dom转化图片 DOM to Image
 
