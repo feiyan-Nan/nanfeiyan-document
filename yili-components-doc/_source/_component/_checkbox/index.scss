@@ -1,0 +1,15 @@
+@import "../../_scss/variables";
+.el-checkbox {
+  .el-checkbox__inner {
+    width: $checkbox-size;
+    height: $checkbox-size;
+    &:after {
+      top: 2px;
+      left: 5px;
+    }
+  }
+
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner::before {
+    top: 6px;
+  }
+}

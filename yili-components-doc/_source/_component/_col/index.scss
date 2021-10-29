@@ -1,0 +1,17 @@
+@import "../../_scss/variables";
+.yi-col {
+  display: block;
+  position: relative;
+  margin-right: var(--gutter);
+  &:last-of-type {
+    margin-right: 0;
+  }
+  @for $i from 1 through $grid-count {
+    &.yi-col-#{$i} {
+      width: percentage(100 / $grid-count * $i / 100);
+    }
+    &.yi-col-offset-#{$i} {
+      margin-left: percentage(100 / $grid-count * $i / 100);
+    }
+  }
+}

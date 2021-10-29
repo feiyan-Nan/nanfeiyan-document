@@ -1,0 +1,63 @@
+{
+  "name": "component-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "npm run dev",
+    "dev": "vue-cli-service serve --mode development --port 50001 --open",
+    "int": "vue-cli-service serve --mode int --port 50002",
+    "uat": "vue-cli-service serve --mode uat --port 50003",
+    "prod": "vue-cli-service serve --mode production --port 50004",
+    "build": "vue-cli-service build",
+    "buildint": "vue-cli-service build --mode int",
+    "builduat": "vue-cli-service build --mode uat"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.1",
+    "highlight.js": "^10.7.2",
+    "v-runtime-template": "^1.10.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "vue3-runtime-template": "^1.0.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

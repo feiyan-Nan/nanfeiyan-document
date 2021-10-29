@@ -1,0 +1,17 @@
+.ycp-grid {
+  .yi-row {
+    background: #efefef;
+  }
+  .yi-col {
+    min-height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: #fff;
+    &:nth-child(n) {
+      background: rgba(#30aff5, 0.6);
+    }
+    &:nth-child(2n) {
+      background: rgba(#30aff5, 0.24);
+    }
+  }
+}

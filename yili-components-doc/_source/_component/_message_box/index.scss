@@ -1,0 +1,16 @@
+@import "../../_scss/variables";
+.el-message-box {
+  padding-bottom: $spacing * 2;
+  .el-message-box__header {
+    padding: $spacing-lg $spacing $spacing;
+    padding-bottom: $spacing;
+  }
+
+  .el-message-box__content {
+    padding: $spacing-sm $spacing;
+  }
+
+  .el-message-box__btns {
+    padding: $spacing-sm $spacing 0;
+  }
+}

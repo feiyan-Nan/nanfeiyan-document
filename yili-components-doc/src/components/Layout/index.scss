@@ -1,0 +1,33 @@
+.layout-container {
+  $header-height: 60px;
+  height: 100%;
+  .el-header {
+    height: $header-height;
+    line-height: $header-height;
+    background: url($imageUrl + "layout/banner-bg.png");
+    .logo {
+      & > * {
+        vertical-align: middle;
+      }
+      img {
+        display: inline;
+        height: 30px;
+        margin: ($header-height - 30px) / 2 0;
+      }
+      span {
+        margin-left: 15px;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .layout-content {
+    height: calc(100% - #{$header-height});
+  }
+
+  .el-aside {
+    height: 100%;
+    border-right: 1px solid #efefef;
+  }
+}

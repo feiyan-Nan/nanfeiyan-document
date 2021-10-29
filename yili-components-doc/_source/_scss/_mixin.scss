@@ -1,0 +1,23 @@
+// 单行块级元素文本
+@mixin mixinLineText($height) {
+  height: $height;
+  line-height: $height;
+}
+
+// 绝对定位
+@mixin mixinPostionAbs($top: 0, $left: 0, $bottom: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+// 基于基础颜色的样式border-color/background-color/color
+@mixin mixinBaseColor($prop, $opacity: 1) {
+  @each $key, $value in $key-colors {
+    &.#{$key} {
+      #{$prop}: rgba($value, $opacity);
+    }
+  }
+}
