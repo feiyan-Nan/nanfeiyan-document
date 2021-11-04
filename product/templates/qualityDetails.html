@@ -56,10 +56,7 @@
 									<el-col :span="5" :xs="1">
 										<el-form-item label="违规等级:" label-width="78px">
 											<el-select v-model="ite.dengji" size="mini" class="inputWidth" :disabled="isApeal">
-												<el-option label="A" value="A"></el-option>
-												<el-option label="B" value="B"></el-option>
-												<el-option label="C" value="C"></el-option>
-												<el-option label="D" value="D"></el-option>
+												<el-option v-for="item in qaResult" :key="item.value" :label="item.label" :value="item.value"></el-option>
 											</el-select>
 										</el-form-item>
 									</el-col>

@@ -5,10 +5,26 @@
 [聊聊 NPM 镜像那些险象环生的坑](https://mp.weixin.qq.com/s/2ntKGIkR3Uiy9cQfITg2NQ)
 
 [一文搞懂peerDependencies](https://segmentfault.com/a/1190000022435060)
+
+[Hash vs chunkhash vs ContentHash](https://medium.com/@sahilkkrazy/hash-vs-chunkhash-vs-contenthash-e94d38a32208)
+
+[使用CSS将图片转换成模糊(毛玻璃)效果, 所有都兼容](https://www.zhangxinxu.com/wordpress/2013/11/css-svg-image-blur/)
+
+[报告老板，我们的H5页面在iOS11系统上白屏了！](https://juejin.cn/post/6856815533749338125)
 ### [Vue 文章](./docs/Vue.md)
 
 
+多数情况下，ES Module可以加载CommonJS
+
 npm和yarn的优化一直在向扁平化迈进
+
+怎么检测是不是undefined类型  `typeof a === 'undefined'`
+
+### 综合测试
+Karma
+Jest
+
+
 
 ## Object.freeze
 
