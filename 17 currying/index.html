@@ -19,7 +19,19 @@
   }
   add(1,2,3) // 6
   var curryingAdd = currying(add);
-  curryingAdd(1)(2)(3) // 6
+  curryingAdd(1,2)(3) // 6
+  console.log(curryingAdd(1, 2)(3));
+
+
+  function curry(fn, ...args) {
+    if(fn.length <=  args.length){
+      return fn(...args)
+    }
+    return function() {
+      return curry(fn, ...args, ...arguments)
+    }
+  }
+
 </script>
 </body>
 </html>

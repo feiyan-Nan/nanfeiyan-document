@@ -11,7 +11,11 @@
 [使用CSS将图片转换成模糊(毛玻璃)效果, 所有都兼容](https://www.zhangxinxu.com/wordpress/2013/11/css-svg-image-blur/)
 
 [报告老板，我们的H5页面在iOS11系统上白屏了！](https://juejin.cn/post/6856815533749338125)
+
+[解决JS里面的数据精度问题](https://www.npmjs.com/package/number-precision)
 ### [Vue 文章](./docs/Vue.md)
+
+
 
 
 多数情况下，ES Module可以加载CommonJS
