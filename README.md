@@ -13,6 +13,9 @@
 [报告老板，我们的H5页面在iOS11系统上白屏了！](https://juejin.cn/post/6856815533749338125)
 
 [解决JS里面的数据精度问题](https://www.npmjs.com/package/number-precision)
+
+[React组件 显示XX分钟前](https://www.npmjs.com/package/react-timeago)
+
 ### [Vue 文章](./docs/Vue.md)
 
 
