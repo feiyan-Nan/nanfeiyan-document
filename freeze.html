@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+        name='viewport'>
+  <meta content='ie=edge' http-equiv='X-UA-Compatible'>
+  <title>Document</title>
+  <style>
+    #box > p {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+<div id='box'>
+  <p>ddd</p>
+  <div><p>ffff</p></div>
+</div>
+</body>
+<script>
+
+  // function callback() {
+  //   console.log('nanfeiyan');
+  //   // requestAnimationFrame(callback)
+  // }
+  //
+  // callback();
+  //
+  //
+  // console.log([] == false)  // true
+  // if([]){
+  //   console.log('hello')
+  // }
+  //
+  // ('b' + 'a' + + 'a' + 'a').toLocaleLowerCase() // 'banana'
+
+  // console.log(1..a)
+  //元编程
+  //元编程是指，将原来的函数，改造成新的函数，这样的函数，称为“装饰器”
+  // 现在发现,新版浏览器不能遍历了, undefined
+  var yideng = { a: 1, age: 23 };
+  Object.defineProperty(yideng, Symbol.iterator, {
+    enumerable: false,
+    writable: false,
+    configurable: true,
+    value: function() {
+      let keys = Object.keys(this);
+      let index = 0;
+      return {
+        next: function() {
+          return {
+            value: this[keys[index++]],
+            done: index > keys.length
+          };
+        }
+      };
+    }
+  });
+  for (const item of yideng) {
+    console.log(item);
+  }
+
+  const nanfeiyan = {[Symbol.toPrimitive]: ((i) => () => ++i)(0)}
+  if(nanfeiyan == 1 && nanfeiyan ==2 && nanfeiyan ==3) {
+    console.log('nanfeiyan')
+  }
+  const xiaopohai = {
+    [Symbol.toPrimitive]: ((i) => () => ++i)(0)
+  }
+</script>
+</html>
+
