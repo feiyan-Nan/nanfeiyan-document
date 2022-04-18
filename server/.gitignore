@@ -12,8 +12,3 @@ run/
 *.un~
 typings/
 .nyc_output/
-
-front/node_modules
-servr/node_modules
-.DS_Store
-*/.DS_Store
