@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+<input id="upload" type="file" onchange="selectLocalFile" />
+<button onclick="alert(1)">测试线程堵塞</button>
+<script>
+  const upload = document.querySelector("#upload");
+  upload.onchange = async (e) => {
+    const file = e.target.files[0];
+    console.time("timeCreateMd5");
+    const md5 = await createFileMd5InWorker(file);
+    // console.log(file.size);
+    // console.log(md5);
+    console.timeEnd("timeCreateMd5");
+  };
+  // 生成文件 md5（web-worker）
+  function createFileMd5InWorker(file) {
+    return new Promise((resolve) => {
+      // 新建worker线程,执行hash.js
+      const worker = new Worker("./hash.js");
+      // 给线程传file
+      worker.postMessage(file);
+      // 当线程传消息的时候，接受消息
+      worker.onmessage = (e) => {
+        console.log(e);
+        const md5 = e.data;
+        md5 && resolve(md5)
+      };
+    });
+  }
+</script>
+</body>
+</html>
+
