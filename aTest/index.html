@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      border: solid 1px red;
+      width: 50px;
+      height: 50px;
+    }
+    .float {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+<div>1</div>
+<div class="float">2</div>
+<div class="float">3</div>
+<div>4</div>
+<div>5</div>
+<div class="float">6</div>
+<script>
+function getStyle(obj, attr) {
+  if (obj.currentStyle) {
+    return obj.currentStyle[attr];
+  } else {
+    return getComputedStyle(obj, false)[attr];
+  }
+}
+
+console.log(getStyle.prototype);
+</script>
+</body>
+</html>
