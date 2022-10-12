@@ -481,3 +481,8 @@ docker cp 容器id:容器内路径  目的主机的路径
 
 dom转化图片 DOM to Image
 
+
+1. 编译器:  是指高级语言到低级语言的转换工具
+2. 转译器:  高级语言到高级语言的转换工具
+
+babel的转义过程: parse ===> transform ===> generate
