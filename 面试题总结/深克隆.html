@@ -6,6 +6,30 @@
 </head>
 <body>
 <script type="text/javascript">
+  // 可以解决循环引用的问题
+  function deepClone1(source) {
+    // null数据需要特殊处理
+    if (source === null) {
+      return source
+    }
+    // 校验要拷贝的数据是对象还是数组
+    const target = Array.isArray(source) ? [] : {}
+    for (const k in source) {
+      const val = source[k]
+      const valueType = typeof val
+      // 校验拷贝的数据类型
+      if (valueType === 'function') {
+        target[k] = new Function(`return ${val.toString()}`)()
+      } else if (valueType === 'object') {
+        target[k] = deepClone(val)
+      } else {
+        target[k] = val
+      }
+    }
+    return target
+  }
+
+
   function deepClone(obj) {
     if(obj === null || typeof obj !== 'object') {
       return obj
@@ -23,6 +47,7 @@
       childs: ['小张', '小红'],
     }
   };
+  console.log(employeeDetailsOriginal.hasOwnProperty('name'));
   let employeeDetailsDuplicate = deepClone(employeeDetailsOriginal)
   employeeDetailsDuplicate.family.name = '后端大家庭'
   employeeDetailsDuplicate.family.childs[0] = '小李'

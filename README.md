@@ -21,13 +21,27 @@
 ### [Vue 文章](./docs/Vue.md)
 
 
+`process.memoryUsage` 可以检测node占用的内存大小
 
+![img_1.png](img_1.png)
+
+clinic: Node.js 性能分析套件
+>QPS: 用来衡量服务的性能; 每秒能处理的请求数
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+
+lvs是基于在7层协议的传输层, TCP和UDP这层, 所以它不具有用户的cookie, 没法做到基于http分流, 如果需要基于http分流, 我们可以使用nginx进行分流
 
 多数情况下，ES Module可以加载CommonJS
 
 npm和yarn的优化一直在向扁平化迈进
 
 怎么检测是不是undefined类型  `typeof a === 'undefined'`
+
+
 
 ### 综合测试
 Karma

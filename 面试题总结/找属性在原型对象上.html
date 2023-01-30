@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <style>
+    body {
+      font-size: 12px;
+    }
+
+    .red {
+      font-size: 24px;
+      width: 5em;
+      /*display: none;*/
+      /*visibility: hidden;*/
+    }
+  </style>
+</head>
+<body>
+<div class='red' hidden='false'>
+  南飞雁
+</div>
+</body>
+<script>
+
+  class Observer {
+    constructor() {
+      this.subNode = [];
+    }
+
+    addSubNode(node) {
+      this.subNode.push(node);
+    }
+
+    update(newVal) {
+      this.subNode.forEach(node => {
+        node.innerHTML = newVal;
+      });
+    }
+  }
+
+  let o = new Observer();
+
+  function Singleton() {
+  }
+
+  Singleton.getInstance = (function() {
+    let instance;
+    return () => {
+      if (!instance) {
+        instance = new Singleton();
+      }
+      return instance;
+    };
+  })();
+
+
+  let arr = [1, 3, 4, 3, 6, 7, 7, 9, 10];
+  // let aa = arr.filter((item, index, array) => {
+  //   return array.indexOf(item) === index
+  // });
+  console.log(Array.from(new Set(arr)));
+
+  // console.log(aa, 'arr');
+  // 两个元素的__proto__是相等的
+  var employeeDetailsOriginal = {
+    name: '前端南飞雁',
+    family: {
+      name: '前端大家庭',
+      childs: ['小张', '小红']
+    },
+    employeeDetailsOriginal: 'employeeDetailsOriginal'
+  };
+  let han = function() {
+  };
+
+  // console.log(employeeDetailsOriginal.__proto__ === obj.__proto__);
+  // console.log(employeeDetailsOriginal.__proto__);
+  // console.log(Object.getPrototypeOf(employeeDetailsOriginal));
+
+  // console.dir(Object.getPrototypeOf(employeeDetailsOriginal));
+  // console.dir(employeeDetailsOriginal.__proto__);
+
+  // Object.getPrototypeOf()
+
+  console.log([].constructor === [].__proto__.constructor);
+  console.log(window.__proto__.__proto__.__proto__.__proto__ === Object.prototype, 'LL');
+  // function find (obj, name) {
+  //   if(obj.hasOwnProperty(name)) {
+  //     return obj;
+  //   }else {
+  //     find(obj.__proto__, name);
+  //   }
+  // }
+  //
+  // console.log(find(employeeDetailsOriginal, 'toString'));
+  let obj = {
+    name: '前端南飞雁',
+    family: {
+      name: '前端大家庭',
+      childs: ['小张', '小红']
+    },
+    employeeDetailsOriginal: 'employeeDetailsOriginal'
+  };
+  Object.setPrototypeOf(obj, {
+    bark: function() {
+      console.log(this.name);
+    }
+  });
+
+  obj.bark();
+  console.log(obj);
+
+  // let hd = Object.create(null);
+
+  let hd = {};
+  console.dir(hd);
+  hd.__proto__ = '123';
+  console.log(hd.__proto__, 'KKK');
+
+  // 单元测试jest,如果是一个很通用的方法, 就会使用jest写单元测试
+  // jest
+
+</script>
+</html>

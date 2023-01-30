@@ -68,6 +68,21 @@
   const xiaopohai = {
     [Symbol.toPrimitive]: ((i) => () => ++i)(0)
   }
+
+  function f(n) {
+    let zhi = 1;
+    let count = 0;
+    while (true) {
+      if(n < zhi) {
+        return count
+      }else {
+        count += 1
+        zhi *= 2;
+      }
+    }
+  }
+
+  console.log(f(6));
 </script>
 </html>
 

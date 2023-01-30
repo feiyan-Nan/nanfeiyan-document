@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function deepClone(obj) {
+    if(obj === null || typeof obj !== 'object') {
+      return obj
+    }
+    var temStorage = obj.constructor()
+    for(let key in obj) {
+      temStorage[key] = deepClone(obj[key])
+    }
+    return temStorage
+  }
+
+
+  Function.prototype.myCall = function(thisArg, ...args) {
+    const fn = Symbol('fn')        // 声明一个独有的Symbol属性, 防止fn覆盖已有属性
+    thisArg = thisArg || window    // 若没有传入this, 默认绑定window对象
+    thisArg[fn] = this              // this指向调用call的对象,即我们要改变this指向的函数
+    const result = thisArg[fn](...args)  // 执行当前函数
+    delete thisArg[fn]              // 删除我们声明的fn属性
+    return result                  // 返回函数执行结果
+  }
+
+  //测试
+  foo.myCall(obj)
+
+
+  // new的相关原理
+  function myNew(fn, ...args) {
+    let obj = {}
+    obj.__proto__ = fn.prototype
+    let result = fn.apply(obj, args)
+    if(Object.prototype.toString.call(result) === "[object Object]") {
+      return  result
+    }else {
+      return obj
+    }
+  }
+
+  function Person(name, age) {
+    this.name = name
+    this.age = age
+  }
+  Person.prototype.say = function() {
+    console.log(`${this.name} say hello`)
+  }
+  let p = myNew(Person, 'Tom', 18)
+
+  // 实现一个寄生组合继承
+  function Parent(name) {
+    this.name = name;
+    this.say = () => {
+      console.log(111);
+    };
+  }
+  Parent.prototype.play = () => {
+    console.log(222);
+  };
+  function Children(name) {
+    Parent.call(this);
+    this.name = name;
+  }
+  Children.prototype = Object.create(Parent.prototype);
+  Children.prototype.constructor = Children;
+
+  // 防抖
+  function debounce(fn, delay = 300) {
+    let timer; //闭包引用的外界变量
+    return function () {
+      const args = arguments;
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+      }, delay);
+    };
+  }
+
+  // 节流
+  function throttle(fn, delay) {
+    let flag = true;
+    return () => {
+      if (!flag) return;
+      flag = false;
+      timer = setTimeout(() => {
+        fn();
+        flag = true;
+      }, delay);
+    };
+  }
+
+  const isValid = function (s) {
+    if (s.length % 2 === 1) {
+      return false;
+    }
+    const regObj = {
+      "{": "}",
+      "(": ")",
+      "[": "]",
+    };
+    let stack = [];
+    for (let i = 0; i < s.length; i++) {
+      if (s[i] === "{" || s[i] === "(" || s[i] === "[") {
+        stack.push(s[i]);
+      } else {
+        const cur = stack.pop();
+        if (s[i] !== regObj[cur]) {
+          return false;
+        }
+      }
+    }
+
+    if (stack.length) {
+      return false;
+    }
+
+    return true;
+  };
+
+
+  const lengthOfLongestSubstring = function (s) {
+    if (s.length === 0) {
+      return 0;
+    }
+
+    let left = 0;
+    let right = 1;
+    let max = 0;
+    while (right <= s.length) {
+      let lr = s.slice(left, right);
+      const index = lr.indexOf(s[right]);
+
+      if (index > -1) {
+        left = index + left + 1;
+      } else {
+        lr = s.slice(left, right + 1);
+        max = Math.max(max, lr.length);
+      }
+      right++;
+    }
+    return max;
+  };
+
+
+  //静态方法
+  function all(promiseArr) {
+    let result = [];
+    //声明一个计数器 每一个promise返回就加一
+    let count = 0;
+    return new Promise((resolve, reject) => {
+      for (let i = 0; i < promiseArr.length; i++) {
+        //这里用 Promise.resolve包装一下 防止不是Promise类型传进来
+        Promise.resolve(promiseArr[i]).then(
+          (res) => {
+            //这里不能直接push数组  因为要控制顺序一一对应(感谢评论区指正)
+            result[i] = res;
+            count++;
+            //只有全部的promise执行成功之后才resolve出去
+            if (count === promiseArr.length) {
+              resolve(result);
+            }
+          },
+          (err) => {
+            reject(err);
+          }
+        );
+      }
+    });
+  }
+  //静态方法
+  function race(promiseArr) {
+    return new Promise((resolve, reject) => {
+      for (let i = 0; i < promiseArr.length; i++) {
+        Promise.resolve(promiseArr[i]).then(
+          (res) => {
+            //promise数组只要有任何一个promise 状态变更  就可以返回
+            resolve(res);
+          },
+          (err) => {
+            reject(err);
+          }
+        );
+      }
+    });
+  }
+
+
+  // 发布订阅模式
+  class EventEmitter {
+    constructor() {
+      this.events = {};
+    }
+    // 实现订阅
+    on(type, callBack) {
+      if (!this.events[type]) {
+        this.events[type] = [callBack];
+      } else {
+        this.events[type].push(callBack);
+      }
+    }
+    // 删除订阅
+    off(type, callBack) {
+      if (!this.events[type]) return;
+      this.events[type] = this.events[type].filter((item) => {
+        return item !== callBack;
+      });
+    }
+    // 只执行一次订阅事件
+    once(type, callBack) {
+      function fn() {
+        callBack();
+        this.off(type, fn);
+      }
+      this.on(type, fn);
+    }
+    // 触发事件
+    emit(type, ...rest) {
+      this.events[type] &&
+      this.events[type].forEach((fn) => fn.apply(this, rest));
+    }
+  }
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+<button class='btn'>按钮1</button>
+<button>按钮2</button>
+</body>
+<script>
+  console.log(document.querySelectorAll('button'));
+  let btns = document.querySelectorAll('button');
+  let filterItem = Array.prototype.filter.call(btns, function(btn) {
+    return btn.innerText === '按钮1';
+  });
+  console.log(filterItem.pop().innerText);
+
+  Promise.resolve(Promise.reject('dd')).then(function(val) {
+    console.log('val88888');
+    console.log(val);
+  }, function(val) {
+    console.log('catch12', val);
+  });
+
+  Promise.reject(Promise.reject('dd')).then(function(val) {
+    console.log(val);
+  }, function(val) {
+    console.log('catch12456', val);
+  });
+
+
+
+</script>
+</html>
