@@ -18,6 +18,8 @@
 
 [React Context可以嵌套使用, 彼此独立](https://enlear.academy/compound-component-pattern-and-react-context-7f67dd6e4c7a)
 
+[Mac设置redis开机自动启动](https://blog.csdn.net/m0_46689235/article/details/123392460)
+
 ### [Vue 文章](./docs/Vue.md)
 
 
