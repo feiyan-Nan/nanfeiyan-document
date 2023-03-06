@@ -43,6 +43,7 @@ npm和yarn的优化一直在向扁平化迈进
 
 怎么检测是不是undefined类型  `typeof a === 'undefined'`
 
+上岸第一剑，先斩意中人
 
 
 ### 综合测试
