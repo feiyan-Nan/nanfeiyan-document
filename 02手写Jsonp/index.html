@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <title>Jsonp</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Document</title>
 </head>
-<body style='height: 200px'>
-<script type="text/javascript" src="./index.js"></script>
-<script type="text/javascript">
-  // 调用方式: jsonp().then(res => console.log(res))
-  // jsonp('https://www.baidu.com/home/msg/data/personalcontent', {
-  //   num: 8,
-  //   _req_seqid: '',
-  //   sid: '',
-  //   _: '1589880241498'
-  // }, 'callback').then(res => {
-  //   console.log(res);
-
-  document.body.addEventListener('click', () => {
-    Promise.resolve().then(()=> console.log("MIcrotask 1"))
-    console.log('Listener 1')
-  })
-  document.body.addEventListener('click', () => {
-    Promise.resolve().then(()=> console.log("MIcrotask 2"))
-    console.log('Listener 2')
-  })
-
-</script>
+<body>
+<div style="padding:10px; border:5px solid blue; margin: 10px; display: block">
+  之前看过⼀篇⽂章，叫做《浏览器⼯作原理：新式⽹络浏览器幕后揭秘》，
+  ⽂章⾔简意赅的介绍的浏览器的⼯作过程，web前端
+  之前看过⼀篇⽂章，叫做《浏览器⼯作原理：新式⽹络浏览器幕后揭秘》，
+  ⽂章⾔简意赅的介绍的浏览器的⼯作过程，web前端
+</div>
 </body>
 </html>

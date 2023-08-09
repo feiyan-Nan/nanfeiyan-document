@@ -20,6 +20,8 @@
 
 [Mac设置redis开机自动启动](https://blog.csdn.net/m0_46689235/article/details/123392460)
 
+[页面引导库](https://driverjs.com/)
+
 ### [Vue 文章](./docs/Vue.md)
 
 
@@ -50,6 +52,17 @@ npm和yarn的优化一直在向扁平化迈进
 Karma
 Jest
 
+
+> 在React18 在setTimeout, Promise, 原生事件中还是会批处理的, 在react低版本中调用几次setState就会执行几次
+
+如果是对象的情况下就会被覆盖
+如果是回调函数的情况下就会收集到队列中,
+```jsx
+this.setState((state) => ({count: state.count + 1}))
+this.setState((state) => ({count: state.count + 1}))
+this.setState((state) => ({count: state.count + 1}))
+// count最终会加3
+```
 
 
 ## Object.freeze
