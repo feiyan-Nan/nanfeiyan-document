@@ -22,6 +22,10 @@
 
 [页面引导库](https://driverjs.com/)
 
+[react动画库](https://www.npmjs.com/package/rc-motion)
+
+[架手架](https://github.com/xun082/react-cli)
+
 ### [Vue 文章](./docs/Vue.md)
 
 
