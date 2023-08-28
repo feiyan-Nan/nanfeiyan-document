@@ -26,6 +26,15 @@
 
 [架手架](https://github.com/xun082/react-cli)
 
+[React自己开发的组件库](https://github.com/lio-mengxiang/mx-design)
+
+
+### Rollup相关
+
+[Rollup全部的插件](https://github.com/rollup/awesome)
+
+
+
 ### [Vue 文章](./docs/Vue.md)
 
 
@@ -39,6 +48,21 @@ clinic: Node.js 性能分析套件
 ![img_2.png](img_2.png)
 
 ![img_3.png](img_3.png)
+
+
+
+- [TTFB](https://web.dev/ttfb) 首字节到达
+- FP 首次绘制
+- [FCP](https://web.dev/fcp) 首次内容绘制
+- [LCP](https://web.dev/lcp) 最大内容绘制  衡量加载性能
+- FMP 首次有意义的绘制
+- DCL DOM内容加载完成
+- L 加载完成
+- [TTI](https://web.dev/tti) 可交互时间
+- [FID](https://web.dev/fid) 首次输入延迟    交互性能
+- [TBT](https://web.dev/tbt) 阻塞总时长
+- [CLS](https://web.dev/cls) 累积布局偏移   视觉稳定性
+- [SI](https://web.dev/si) 速度指数
 
 
 lvs是基于在7层协议的传输层, TCP和UDP这层, 所以它不具有用户的cookie, 没法做到基于http分流, 如果需要基于http分流, 我们可以使用nginx进行分流
