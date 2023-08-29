@@ -64,6 +64,11 @@ clinic: Node.js 性能分析套件
 - [CLS](https://web.dev/cls) 累积布局偏移   视觉稳定性
 - [SI](https://web.dev/si) 速度指数
 
+前端工程化: 模块化, 组件化, 规范化, 自动化
+
+模块化方案: IIFE, CJS, AMD, CMD, UMD, ESM
+
+
 
 lvs是基于在7层协议的传输层, TCP和UDP这层, 所以它不具有用户的cookie, 没法做到基于http分流, 如果需要基于http分流, 我们可以使用nginx进行分流
 
