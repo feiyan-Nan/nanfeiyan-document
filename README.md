@@ -28,6 +28,8 @@
 
 [React自己开发的组件库](https://github.com/lio-mengxiang/mx-design)
 
+[本地开发组件软连接](https://www.npmjs.com/package/yalc)
+
 
 ### Rollup相关
 
