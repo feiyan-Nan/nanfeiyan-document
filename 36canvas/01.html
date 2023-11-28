@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="300" height="300"></canvas>
+<script>
+  var canvas = document.getElementById("canvas"); // 得到DOM对象
+  if (canvas.getContext) {
+    var ctx = canvas.getContext("2d"); // 得到渲染上下文
+
+    ctx.beginPath();
+    ctx.moveTo(125, 25);
+    ctx.lineTo(125, 105);
+    ctx.lineTo(205, 25);
+    ctx.closePath(); // 手动闭合路径
+    ctx.stroke();
+  }
+</script>
+</body>
+</html>

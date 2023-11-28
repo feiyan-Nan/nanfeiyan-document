@@ -30,6 +30,7 @@
 
 [本地开发组件软连接](https://www.npmjs.com/package/yalc)
 
+[页面滚动动画CSS3驱动](https://www.npmjs.com/package/aos)
 
 ### Rollup相关
 
