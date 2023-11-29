@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+<script>
+const ie11 = () => '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style
+const fireEvent = (eventName, data) => {
+  let customEvent;
+
+  if (ie11()) {
+    customEvent = document.createEvent('CustomEvent');
+    customEvent.initCustomEvent(eventName, true, true, { detail: data });
+  } else {
+    customEvent = new CustomEvent(eventName, {
+      detail: data
+    });
+  }
+
+  return document.dispatchEvent(customEvent);
+};
+fireEvent('自定义事件的名称', {name: '数据'})
+
+
+document.addEventListener('自定义事件的名称', ({ detail }) => {
+  console.log('animated out', detail);
+});
+</script>
+</body>
+</html>

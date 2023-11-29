@@ -32,6 +32,26 @@
 
 [页面滚动动画CSS3驱动](https://www.npmjs.com/package/aos)
 
+[时间的处理函数](https://www.npmjs.com/package/date-fns)
+
+[0.2kb的复制粘贴库](https://www.npmjs.com/package/copy-text-to-clipboard)
+
+[xml的快速解析](https://www.npmjs.com/package/fast-xml-parser)
+
+[处理"🏳️‍🌈".length == 6的问题](https://www.npmjs.com/package/grapheme-splitter)
+
+[immutability-helper](https://www.npmjs.com/package/immutability-helper)
+
+[memoize-one函数缓存](https://www.npmjs.com/package/memoize-one)
+
+[re-resizable缩放区域](https://www.npmjs.com/package/re-resizable)
+
+[react-resizable 缩放区域](https://www.npmjs.com/package/react-resizable)
+
+[React无限滚动](https://www.npmjs.com/package/react-infinite-scroller)
+
+[React加载各种svg](https://www.npmjs.com/package/react-inlinesvg)
+
 ### Rollup相关
 
 [Rollup全部的插件](https://github.com/rollup/awesome)
