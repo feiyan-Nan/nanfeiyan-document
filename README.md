@@ -52,6 +52,20 @@
 
 [React加载各种svg](https://www.npmjs.com/package/react-inlinesvg)
 
+[React的列表的拖拽排序](https://www.npmjs.com/package/react-sortable-hoc)
+
+[react-virtualized](https://www.npmjs.com/package/react-virtualized)
+
+[react-window比react-virtualized更小更快](https://www.npmjs.com/package/react-window)
+
+[react-tiny-virtual-list](https://www.npmjs.com/package/react-tiny-virtual-list)
+
+[react-infinite](https://www.npmjs.com/package/react-infinite)
+
+[resize-observer-polyfill](https://www.npmjs.com/package/resize-observer-polyfill)
+
+
+
 ### Rollup相关
 
 [Rollup全部的插件](https://github.com/rollup/awesome)
