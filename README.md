@@ -34,6 +34,8 @@
 
 [时间的处理函数](https://www.npmjs.com/package/date-fns)
 
+[slugify-处理字符串](https://www.npmjs.com/package/slugify)
+
 [0.2kb的复制粘贴库](https://www.npmjs.com/package/copy-text-to-clipboard)
 
 [xml的快速解析](https://www.npmjs.com/package/fast-xml-parser)
@@ -47,6 +49,8 @@
 [re-resizable缩放区域](https://www.npmjs.com/package/re-resizable)
 
 [react-resizable 缩放区域](https://www.npmjs.com/package/react-resizable)
+
+[react-confetti 粒子库](https://www.npmjs.com/package/react-confetti)
 
 [React无限滚动](https://www.npmjs.com/package/react-infinite-scroller)
 
@@ -64,6 +68,44 @@
 
 [resize-observer-polyfill](https://www.npmjs.com/package/resize-observer-polyfill)
 
+[scroll-into-view-if-needed](https://www.npmjs.com/package/scroll-into-view-if-needed)
+
+[linklocal建立本地file:路径](https://www.npmjs.com/package/linklocal)
+
+[clsx代替classNames,更小更快](https://github.com/lukeed/clsx)
+
+[classcat代替classNames,更小更快](https://github.com/lukeed/clsx)
+clsx比classcat更好一些, 使用量更高的是clsx
+
+[@feiyan-cli/db](https://github.com/feiyan-Nan/feiyan-cli/blob/master/packages/db/src/index.js)
+
+[tiny-emitter](https://www.npmjs.com/package/tiny-emitter)
+
+[mitt](https://www.npmjs.com/package/mitt) 如果不怎么考虑兼容就可以使用浏览器默认的自定义事件
+
+
+
+### Node相关
+
+[fs-extra](https://www.npmjs.com/package/fs-extra)
+
+[del](https://www.npmjs.com/package/del)
+
+[merge2-合并数据流](https://www.npmjs.com/package/merge2)
+
+[through2-对Buffer数据进行遍历处理](https://www.npmjs.com/package/through2)
+
+[camelcase](https://www.npmjs.com/package/camelcase)
+
+[npm-which找npm安装的本地包路径](https://www.npmjs.com/package/npm-which)
+
+![img_5.png](img_5.png)
+
+[got-一个比较好的请求库](https://www.npmjs.com/package/npm-which)
+
+[nanoid-生成一个不重复的字符串](https://github.com/ai/nanoid/tree/56e8ef93d091fc61f85991332b11c05f2daf928e)
+
+[node-html-parser-解析html非常快](https://www.npmjs.com/package/node-html-parser)
 
 
 ### Rollup相关
