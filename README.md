@@ -107,6 +107,10 @@ clsx比classcat更好一些, 使用量更高的是clsx
 
 [node-html-parser-解析html非常快](https://www.npmjs.com/package/node-html-parser)
 
+[lru-cache](https://www.npmjs.com/package/lru-cache) 做对象缓存, 越活跃的越不容易被销毁
+
+[userhome](https://www.npmjs.com/package/userhome) 当前用户路径(跨平台)
+
 
 ### Rollup相关
 
