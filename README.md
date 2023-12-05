@@ -83,6 +83,12 @@ clsx比classcat更好一些, 使用量更高的是clsx
 
 [mitt](https://www.npmjs.com/package/mitt) 如果不怎么考虑兼容就可以使用浏览器默认的自定义事件
 
+[custom-event](https://www.npmjs.com/package/custom-event) 处理浏览器自定义事件的一些兼容问题
+
+[ora](https://www.npmjs.com/package/ora) 做控制台logo的
+
+[moment-locales-webpack-plugin](https://www.npmjs.com/package/moment-locales-webpack-plugin) 删除无用的moment本地语言
+
 
 
 ### Node相关
