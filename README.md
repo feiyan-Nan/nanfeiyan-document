@@ -1,7 +1,13 @@
 # nanfeiyan-document
 
-
 ## 优质文章记录
+
+
+滚动
+
+
+[scroll-snap](https://github.com/lucafalasco/scroll-snap) 整个屏幕滚动
+
 [聊聊 NPM 镜像那些险象环生的坑](https://mp.weixin.qq.com/s/2ntKGIkR3Uiy9cQfITg2NQ)
 
 [一文搞懂peerDependencies](https://segmentfault.com/a/1190000022435060)
@@ -15,6 +21,8 @@
 [解决JS里面的数据精度问题](https://www.npmjs.com/package/number-precision)
 
 [React组件 显示XX分钟前](https://www.npmjs.com/package/react-timeago)
+
+[React组件 整页滚动](https://www.npmjs.com/package/react-page-scroller)
 
 [React Context可以嵌套使用, 彼此独立](https://enlear.academy/compound-component-pattern-and-react-context-7f67dd6e4c7a)
 
@@ -89,8 +97,6 @@ clsx比classcat更好一些, 使用量更高的是clsx
 
 [moment-locales-webpack-plugin](https://www.npmjs.com/package/moment-locales-webpack-plugin) 删除无用的moment本地语言
 
-
-
 ### Node相关
 
 [fs-extra](https://www.npmjs.com/package/fs-extra)
@@ -117,28 +123,23 @@ clsx比classcat更好一些, 使用量更高的是clsx
 
 [userhome](https://www.npmjs.com/package/userhome) 当前用户路径(跨平台)
 
-
 ### Rollup相关
 
 [Rollup全部的插件](https://github.com/rollup/awesome)
 
-
-
 ### [Vue 文章](./docs/Vue.md)
-
 
 `process.memoryUsage` 可以检测node占用的内存大小
 
 ![img_1.png](img_1.png)
 
 clinic: Node.js 性能分析套件
->QPS: 用来衡量服务的性能; 每秒能处理的请求数
+
+> QPS: 用来衡量服务的性能; 每秒能处理的请求数
 
 ![img_2.png](img_2.png)
 
 ![img_3.png](img_3.png)
-
-
 
 - [TTFB](https://web.dev/ttfb) 首字节到达
 - FP 首次绘制
@@ -157,7 +158,47 @@ clinic: Node.js 性能分析套件
 
 模块化方案: IIFE, CJS, AMD, CMD, UMD, ESM
 
+### v-for和v-if的优先级
 
+在[Vue](https://www.baidu.com/s?rsv_idx=1&wd=Vue&fenlei=256&usm=1&ie=utf-8&rsv_pq=bc653b98001a30ef&oq=v-for%E5%92%8Cv-if%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7&rsv_t=68f4uX2ZJC8H3Te5F7vofLixVY9OeHiOEm5q9qkrdEvKcXpPODycE9%2Bs990&sa=re_dqa_zy&icon=1)中，v-for和v-if的优先级取决于版本：
+
+* Vue 2.0。v-for的优先级高于v-if。这意味着，当v-for和v-if同时出现在同一个元素上时，v-for会被先解析，然后才会考虑v-if。这可能导致在渲染少量元素时，每次重新渲染都会遍历整个列表，从而浪费性能。
+* Vue 3.0。v-if的优先级高于v-for。在Vue 3中，如果将v-if和v-for同时使用在同一个元素上，可能会出现编译错误，因为v-if依赖于v-for的数据源。
+
+因此，建议在处理v-if和v-for连用的场景时，采取以下措施：
+
+* 在循环渲染之前使用filter或computed计算属性过滤不需要的数据。
+* 如果需要根据条件渲染单个项，可以将v-if放在内层元素上。
+* 避免在同一元素上同时使用两者，以减少性能浪费
+
+### vue组件通信有哪些
+
+在[Vue](https://www.baidu.com/s?rsv_idx=1&wd=Vue&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=ed02rOLjo71OG3KR6Ui3BSaDhYz3BnwK%2ByWRqRMUDHpSPU97wc797MhsoPo&sa=re_dqa_zy&icon=1)中，组件通信主要有以下几种方式：
+
+1. [父子组件](https://www.baidu.com/s?rsv_idx=1&wd=%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=ed02rOLjo71OG3KR6Ui3BSaDhYz3BnwK%2ByWRqRMUDHpSPU97wc797MhsoPo&sa=re_dqa_zy&icon=1)之间的通信：
+
+   * 父组件向子组件传递数据：通过自定义属性（props）实现，子组件在模板中使用这些属性来接收数据。
+   * 子组件向父组件传递数据：子组件通过触发事件（\$emit）来向父组件发送数据。
+2. 兄弟组件之间的通信：
+
+   * 可以使用[EventBus](https://www.baidu.com/s?rsv_idx=1&wd=EventBus&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=8530%2FqGf6fksnvOsw1JKM5kHMWlcvW54q8E31hCwi5O3S2Y%2FN183cISajCg&sa=re_dqa_zy&icon=1)（一个简单的发布-订阅模式）来实现兄弟组件之间的数据传递。
+3. 祖孙与后代组件之间的通信：
+
+   * 使用[provide](https://www.baidu.com/s?rsv_idx=1&wd=provide&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=8530%2FqGf6fksnvOsw1JKM5kHMWlcvW54q8E31hCwi5O3S2Y%2FN183cISajCg&sa=re_dqa_zy&icon=1)和[inject](https://www.baidu.com/s?rsv_idx=1&wd=inject&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=8530%2FqGf6fksnvOsw1JKM5kHMWlcvW54q8E31hCwi5O3S2Y%2FN183cISajCg&sa=re_dqa_zy&icon=1)实现依赖注入，祖先组件通过provide定义数据，后代组件通过inject接收数据。
+   * 通过[attrs](https://www.baidu.com/s?rsv_idx=1&wd=attrs&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=8530%2FqGf6fksnvOsw1JKM5kHMWlcvW54q8E31hCwi5O3S2Y%2FN183cISajCg&sa=re_dqa_zy&icon=1)将数据从祖先组件传递给后代组件。
+   * 通过[listeners](https://www.baidu.com/s?rsv_idx=1&wd=listeners&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=01b6EkTscx97FdD3%2BVqWJUOJu9s1gPVxsbtaALBXv%2F7xAvFvn8y4owljqqs&sa=re_dqa_zy&icon=1)将数据从后代组件传递给祖先组件。
+4. 非关系组件间的通信：
+
+   * 使用根Vue实例（\$root）实现跨级通信，但这不是推荐的做法。
+   * 利用[localStorage](https://www.baidu.com/s?rsv_idx=1&wd=localStorage&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=01b6EkTscx97FdD3%2BVqWJUOJu9s1gPVxsbtaALBXv%2F7xAvFvn8y4owljqqs&sa=re_dqa_zy&icon=1)或路由参数（query）实现跨页面或跨组件的数据传递。
+   * 使用[Vuex](https://www.baidu.com/s?rsv_idx=1&wd=Vuex&fenlei=256&usm=1&ie=utf-8&rsv_pq=c8e02b36001efe83&oq=vue%E7%BB%84%E5%BB%BA%E9%80%9A%E4%BF%A1%E6%9C%89%E5%93%AA%E4%BA%9B&rsv_t=01b6EkTscx97FdD3%2BVqWJUOJu9s1gPVxsbtaALBXv%2F7xAvFvn8y4owljqqs&sa=re_dqa_zy&icon=1)实现全局数据管理，这是Vue官方推荐的全局数据共享方式
+
+     删除线表示vue3没有
+
+![image.png](assets/image.png)
+
+
+![image.png](assets/image1.png)
 
 lvs是基于在7层协议的传输层, TCP和UDP这层, 所以它不具有用户的cookie, 没法做到基于http分流, 如果需要基于http分流, 我们可以使用nginx进行分流
 
@@ -169,16 +210,24 @@ npm和yarn的优化一直在向扁平化迈进
 
 上岸第一剑，先斩意中人
 
+浏览器三大线程: js引擎线程, GUI渲染线程, 浏览器事件触发线程
+
+声明式
+组件化
+复用性
+可扩展性
+跨平台
 
 ### 综合测试
+
 Karma
 Jest
-
 
 > 在React18 在setTimeout, Promise, 原生事件中还是会批处理的, 在react低版本中调用几次setState就会执行几次
 
 如果是对象的情况下就会被覆盖
 如果是回调函数的情况下就会收集到队列中,
+
 ```jsx
 this.setState((state) => ({count: state.count + 1}))
 this.setState((state) => ({count: state.count + 1}))
@@ -186,6 +235,35 @@ this.setState((state) => ({count: state.count + 1}))
 // count最终会加3
 ```
 
+### Json.ts
+
+```typescript
+/**
+ * Stringify JSON
+ * @param v Data to be stringify
+ * @returns Stringified JSON, or empty string while encode failed.
+ */
+export const encodeJSON = (v: unknown): string => {
+  try {
+    return JSON.stringify(v);
+  } catch {
+    return '';
+  }
+};
+
+/**
+ * Decode JSON.
+ * @param v Stringified JSON.
+ * @returns JSON data, or undefined while decode failed.
+ */
+export const decodeJSON = <T = unknown>(v: string): T | undefined => {
+  try {
+    return JSON.parse(v);
+  } catch {
+    return void 0;
+  }
+};
+```
 
 ## Object.freeze
 
@@ -269,8 +347,6 @@ console.log(fn1(1, 2));
 * Common.js ES6 Module CMD AMD UMD这些代码规范之间的相互转化（UMD是AMD和CMD的统一规范）
 * webpack rollup 等打包工具
 * TypeScript，JSX等转化为JavaScript
-
-
 * **JavaScript Parser 把js源码转化为抽象语法树的解析器**
 * **浏览器会将js源代码通过解析器转化为抽象语法树， 再进一步转化为字节码或者机器码**
 
@@ -563,19 +639,18 @@ const abort: Abort = { name: 2 }; const abort1: Abort<string> = { name: '2' };
 3. 储存位置信息
 4. 浏览在页面的具体位置
 
-
-
 Common.js
 AMD (异步模块定义)  RequireJS
 
-
 http2:
+
 1. 多路复用
 2. 对头信息进行压缩
 3. 采用二进制格式传输数据
 4. Service push
 
 ## Docker的常用命令
+
 ```bash
 docker version    # 显示docker的版本信息
 
@@ -614,7 +689,9 @@ docker attach 容器id  #进入正在执行的终端, 不会启动新的进程
 
 docker run -d -p 80:80 nanfeiyan # 后台运行
 ```
+
 ### 查看容器中进程信息 ps
+
 ```shell
 docker top 容器id
 
@@ -623,16 +700,12 @@ docker inspect 容器id
 ```
 
 ### 从容器拷贝文件到主机上
+
 ```shell
 docker cp 容器id:容器内路径  目的主机的路径
 ```
 
-
-
-
-
 dom转化图片 DOM to Image
-
 
 1. 编译器:  是指高级语言到低级语言的转换工具
 2. 转译器:  高级语言到高级语言的转换工具

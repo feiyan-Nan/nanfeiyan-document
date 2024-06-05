@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<canvas id='canvas'></canvas>
+<script type='x-shader/x-vertex'>
+//  glsl
+  void main() {
+    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+  }
+</script>
+<script>
+  const canvas = document.getElementById('canvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const gl = canvas.getContext('webgl');
+  gl.clearColor(0,0,0,1)
+  gl.clear(gl.COLOR_BUFFER_BIT)
+</script>
+</body>
+</html>
