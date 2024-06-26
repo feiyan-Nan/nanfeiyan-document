@@ -22,6 +22,10 @@
 
 [React组件 显示XX分钟前](https://www.npmjs.com/package/react-timeago)
 
+[浏览器文件下载,download](https://www.npmjs.com/package/js-file-downloader)
+
+
+
 [React组件 整页滚动](https://www.npmjs.com/package/react-page-scroller)
 
 [React Context可以嵌套使用, 彼此独立](https://enlear.academy/compound-component-pattern-and-react-context-7f67dd6e4c7a)
