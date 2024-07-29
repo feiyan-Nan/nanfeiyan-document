@@ -8,6 +8,8 @@
 
 [scroll-snap](https://github.com/lucafalasco/scroll-snap) 整个屏幕滚动
 
+[处理数据精度的问题](https://www.npmjs.com/package/decimal.js)
+
 [聊聊 NPM 镜像那些险象环生的坑](https://mp.weixin.qq.com/s/2ntKGIkR3Uiy9cQfITg2NQ)
 
 [一文搞懂peerDependencies](https://segmentfault.com/a/1190000022435060)
