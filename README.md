@@ -5,6 +5,7 @@
 
 滚动
 
+[fast-safe-stringify](https://www.npmjs.com/package/fast-safe-stringify) JSON.stringify的安全快速序列化替代方案。
 
 [scroll-snap](https://github.com/lucafalasco/scroll-snap) 整个屏幕滚动
 
