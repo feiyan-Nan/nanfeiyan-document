@@ -4,6 +4,7 @@
 
 
 滚动
+[class-transformer](https://medium.com/@coder_in_austria/using-the-class-transformer-for-better-data-architecture-87448f74037a) 用class进行数据转化。
 
 [fast-safe-stringify](https://www.npmjs.com/package/fast-safe-stringify) JSON.stringify的安全快速序列化替代方案。
 
