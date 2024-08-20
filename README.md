@@ -4,9 +4,14 @@
 
 
 滚动
+
+[auto-zustand-selectors-hookr](https://github.com/Albert-Gao/auto-zustand-selectors-hook) 自动生成zustand的selectors
+
 [class-transformer](https://medium.com/@coder_in_austria/using-the-class-transformer-for-better-data-architecture-87448f74037a) 用class进行数据转化。
 
 [fast-safe-stringify](https://www.npmjs.com/package/fast-safe-stringify) JSON.stringify的安全快速序列化替代方案。
+
+[magic-string](https://www.npmjs.com/package/magic-string) 是一个操作字符串和生成source-map的工具
 
 [scroll-snap](https://github.com/lucafalasco/scroll-snap) 整个屏幕滚动
 
