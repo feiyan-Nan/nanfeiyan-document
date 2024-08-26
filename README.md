@@ -3,7 +3,8 @@
 ## 优质文章记录
 
 
-滚动
+
+[eyedropper-polyfill](https://github.com/iam-medvedev/eyedropper-polyfill) 取色的polyfill
 
 [auto-zustand-selectors-hookr](https://github.com/Albert-Gao/auto-zustand-selectors-hook) 自动生成zustand的selectors
 
