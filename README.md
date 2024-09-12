@@ -2,8 +2,9 @@
 
 ## 优质文章记录
 
+[axios-retry
+](https://www.npmjs.com/package/axios-retry) axios的自动重试
 
-滚动
 
 [auto-zustand-selectors-hookr](https://github.com/Albert-Gao/auto-zustand-selectors-hook) 自动生成zustand的selectors
 
