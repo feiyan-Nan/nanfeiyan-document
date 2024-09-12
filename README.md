@@ -6,6 +6,8 @@
 ](https://www.npmjs.com/package/axios-retry) axios的自动重试
 
 
+[eyedropper-polyfill](https://github.com/iam-medvedev/eyedropper-polyfill) 取色的polyfill
+
 [auto-zustand-selectors-hookr](https://github.com/Albert-Gao/auto-zustand-selectors-hook) 自动生成zustand的selectors
 
 [class-transformer](https://medium.com/@coder_in_austria/using-the-class-transformer-for-better-data-architecture-87448f74037a) 用class进行数据转化。
