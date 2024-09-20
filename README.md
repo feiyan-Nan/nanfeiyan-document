@@ -1,8 +1,22 @@
 # nanfeiyan-document
 
 ## 优质文章记录
-https://alova.js.org/zh-CN/
 
+Reflect.ownKeys() 获取对象自身可枚举和不可枚举的属性
+
+WeakMap的键是不可枚举的。不提供列出其键的方法,
+
+[Object.groupBy()](https://www.zhangxinxu.com/wordpress/2024/09/js-object-groupby/) 兼容性良好, 可以在项目中使用了
+
+![w](https://an-jia-shop.oss-cn-shenzhen.aliyuncs.com/202409201032193.png)
+
+Symbol 不是构造函数,不能new
+如果真的想创建 Symbol 对象，可以通过如下方式：
+```js
+const sym = Object(Symbol(1)); // Symbol {Symbol(1), description: '1'}
+typeof sym; // 'object'
+Object.prototype.toString.call(sym); // '[object Symbol]'
+```
 
 [alova](https://alova.js.org/zh-CN/) 增强请求库
 

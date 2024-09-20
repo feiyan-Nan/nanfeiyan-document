@@ -14,3 +14,6 @@ const lisi = new Person(
   23
 )
 console.log(lisi.eat());
+
+
+console.log(Reflect.ownKeys(lisi));
