@@ -18,6 +18,8 @@ typeof sym; // 'object'
 Object.prototype.toString.call(sym); // '[object Symbol]'
 ```
 
+观察者模式和发布订阅模式   vue是观察者模式
+
 [alova](https://alova.js.org/zh-CN/) 增强请求库
 
 [Tanstack Query](https://tanstack.com/query/latest) 增强请求库
