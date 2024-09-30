@@ -23,6 +23,29 @@ Object.prototype.toString.call(sym); // '[object Symbol]'
 
 Promise.then(() => Promise.resolve(1)).then(() => console.log(2)).then(() => console.log(3));
 
+
+const fs = require('fs/promises');
+
+
+promise的then的第二个参数是接受错误的,
+```js
+const fs = require('fs/promises');
+fs.readFile('test.txt', 'utf8')
+  .then(data => {return fs.readFile('test2.txt', 'utf8');}, err => console.log(err))
+  .then(null, err => console.log(err));
+```
+
+
+前提条件: 并发是循环, 串行是递归
+* Promise.all  必须都成功, 有一个失败就失败 返回的数组是成功的
+* Promise.allSettled  allSettled的返回数组是成功的和失败的组合
+* Promise.race  那个快那个就先返回
+* Promise.any
+
+
+
+[promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
+
 [alova](https://alova.js.org/zh-CN/) 增强请求库
 
 [Tanstack Query](https://tanstack.com/query/latest) 增强请求库

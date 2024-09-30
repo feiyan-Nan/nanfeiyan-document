@@ -1,19 +1,28 @@
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+const fs = require('fs/promises');
 
-  eat () {
-    console.log(this.name + ' eat');
-  }
-}
-
-const lisi = new Person(
-  'lisi',
-  23
-)
-console.log(lisi.eat());
+fs.readFile('ce.ts', 'utf-8').then(res => {
+  console.log(res);
+});
 
 
-console.log(Reflect.ownKeys(lisi));
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//
+//   eat () {
+//     console.log(this.name + ' eat');
+//   }
+// }
+//
+// const lisi = new Person(
+//   'lisi',
+//   23
+// )
+// console.log(lisi.eat());
+//
+//
+// console.log(Reflect.ownKeys(lisi));
+
