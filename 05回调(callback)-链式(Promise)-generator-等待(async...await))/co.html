@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/co/4.1.0/index.min.js"></script>
+</head>
+<body>
+
+<script>
+  // function* generator() {
+  //   const r1 = yield 'hello';
+  //   console.log(r1, '33');
+  //   const r2 = yield 'world';
+  //   console.log(r2, '555');
+  // }
+  // console.log(co);
+  co(function* () {
+    var result = yield ['world'];
+    return result;
+  }).then(function (value) {
+    console.log(value);
+  }, function (err) {
+    console.error(err.stack);
+  });
+
+  async function async1() {
+    return Promise.resolve('1');
+  }
+  async1().then(res => {
+    console.log(res);
+  })
+  Promise.any()
+</script>
+</body>
+</html>

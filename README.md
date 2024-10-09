@@ -26,6 +26,8 @@ Promise.then(() => Promise.resolve(1)).then(() => console.log(2)).then(() => con
 
 const fs = require('fs/promises');
 
+其实async函数就是Generator加自动执行器的语法糖  co是一个自执行generator的库
+
 
 promise的then的第二个参数是接受错误的,
 ```js
@@ -39,8 +41,8 @@ fs.readFile('test.txt', 'utf8')
 前提条件: 并发是循环, 串行是递归
 * Promise.all  必须都成功, 有一个失败就失败 返回的数组是成功的
 * Promise.allSettled  allSettled的返回数组是成功的和失败的组合
-* Promise.race  那个快那个就先返回
-* Promise.any
+* Promise.race (rui s) 那个快那个就先返回
+* Promise.any  any的返回值是第一个成功的, 有失败的会被忽略, 全部失败就报错
 
 
 
