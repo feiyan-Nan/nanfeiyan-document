@@ -24,6 +24,21 @@ Object.prototype.toString.call(sym); // '[object Symbol]'
 Promise.then(() => Promise.resolve(1)).then(() => console.log(2)).then(() => console.log(3));
 
 
+```js
+async function test() {
+  console.log(1);
+  await console.log(2);
+  console.log(2);
+}
+
+// 在执行顺利上等价于
+async function test() {
+  console.log(1);
+  Promise.resolve(console.log(2)).then(() => console.log(3));
+}
+
+```
+
 const fs = require('fs/promises');
 
 其实async函数就是Generator加自动执行器的语法糖  co是一个自执行generator的库

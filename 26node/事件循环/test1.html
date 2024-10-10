@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+</head>
+<body>
+<script>
+  document.body.style.background = 'red';
+  console.log(1)
+  Promise.resolve().then(() => {
+    console.log(2)
+    // 微任务执行完成后才渲染页面, 所以这里的背景色是绿色的
+    document.body.style.background = 'green';
+  })
+  console.log(3)
+</script>
+</body>
+</html>

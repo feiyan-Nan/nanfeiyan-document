@@ -101,3 +101,15 @@ concurrentAll().then(() => {
 
 
 // concurrentAll() 和 concurrentThen() 执行时间是一个样的
+
+
+setTimeout(() => {
+  console.log('setTimeout12');
+  setTimeout(() => {
+    console.log('setTimeout56');
+  }, 400);
+}, 100);
+
+setTimeout(() => {
+  console.log('setTimeout34');
+}, 500);
