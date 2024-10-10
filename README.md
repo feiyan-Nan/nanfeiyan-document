@@ -48,6 +48,8 @@ fs.readFile('test.txt', 'utf8')
 
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
+[request-idle-callback](https://www.npmjs.com/package/request-idle-callback) requestIdleCallback 的polyfill
+
 [alova](https://alova.js.org/zh-CN/) 增强请求库
 
 [Tanstack Query](https://tanstack.com/query/latest) 增强请求库
