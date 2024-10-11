@@ -6,6 +6,11 @@ Reflect.ownKeys() 获取对象自身可枚举和不可枚举的属性
 
 WeakMap的键是不可枚举的。不提供列出其键的方法,
 
+
+多线程适合计算密集型任务, 单线程适合I/O密集型任务
+
+同步阻塞, 异步非阻塞
+
 [Object.groupBy()](https://www.zhangxinxu.com/wordpress/2024/09/js-object-groupby/) 兼容性良好, 可以在项目中使用了
 
 ![w](https://an-jia-shop.oss-cn-shenzhen.aliyuncs.com/202409201032193.png)
@@ -60,6 +65,20 @@ fs.readFile('test.txt', 'utf8')
 * Promise.any  any的返回值是第一个成功的, 有失败的会被忽略, 全部失败就报错
 
 
+node: 异步非阻塞, 基于事件
+1. 工具:  gulp webpack rollup vite
+2. 服务端渲染
+3. BFF
+4. 做代理服务器
+
+模块化:
+1. 命名冲突
+
+单例模式: 模块内部变量只对外暴露一个值, 外部只能获取这个值
+自执行函数 --> AMD ---> esModule
+
+* Require.js遵循AMD（异步模块定义）规范
+* Sea.js遵循CMD（通用模块定义）规范
 
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
