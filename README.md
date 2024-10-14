@@ -1,6 +1,11 @@
 # nanfeiyan-document
 
+分享: commonjs 加载原理
+
 ## 优质文章记录
+
+require的加载原理, require加载的模块有缓存功能, 对于第三方模块会沿着路径往上查找
+
 
 Reflect.ownKeys() 获取对象自身可枚举和不可枚举的属性
 
@@ -79,6 +84,14 @@ node: 异步非阻塞, 基于事件
 
 * Require.js遵循AMD（异步模块定义）规范
 * Sea.js遵循CMD（通用模块定义）规范
+
+
+**path.resolve 参数里面如果有/开头, 就会从根目录开始找**
+
+
+
+
+
 
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
