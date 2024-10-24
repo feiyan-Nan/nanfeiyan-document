@@ -18,6 +18,8 @@ const fs = require('fs')
 const path = require('path')
 const vm = require('vm')
 
+console.log(path.resolve('11'));
+
 function Module(id) {
   this.id = id
   this.exports = {}

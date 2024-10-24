@@ -1,6 +1,18 @@
 # nanfeiyan-document
 
+```shell
+history | grep "npm"
+```
+
 分享: commonjs 加载原理
+
+
+extends  继承实例属性和原型属性
+Object.setPrototypeOf(Child.prototype, Parent.prototype);
+
+1. Object.setPrototypeOf和Object.create的区别?
+2. extends执行了父类的new
+3.
 
 ## 优质文章记录
 
@@ -90,8 +102,9 @@ node: 异步非阻塞, 基于事件
 
 
 
+## 脚手架工具
 
-
+[cli-progress](https://www.npmjs.com/package/cli-progress) 进度条
 
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
