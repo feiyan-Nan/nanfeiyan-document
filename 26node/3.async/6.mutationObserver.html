@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const targetNode = document.getElementById("app");
+
+      // 观察器的配置（需要观察什么变动）
+      const config = { attributes: true, childList: true, subtree: true };
+
+      // 当观察到变动时执行的回调函数
+      const callback = function (mutationsList, observer) {
+        // Use traditional 'for loops' for IE 11
+        console.log('callback')
+      };
+
+      // 创建一个观察器实例并传入回调函数
+      const observer = new MutationObserver(callback);
+
+      // 以上述配置开始观察目标节点
+      observer.observe(targetNode, config);
+
+      // 之后，可停止观察
+
+      targetNode.appendChild(document.createElement('p'));
+      console.log('ok')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="button">123</div>
+    <script>
+        // 用户点击是触发了两个宏任务  两个宏任务要依次执行
+         button.addEventListener('click',()=>{
+            console.log('listener1');
+            Promise.resolve().then(()=>console.log('micro task1'))
+        })
+        button.addEventListener('click',()=>{
+            console.log('listener2');
+            Promise.resolve().then(()=>console.log('micro task2'))
+        })
+        button.click(); // click1() click2()  在同一轮宏任务重全部执行了
+        // 用户点击是宏任务 
+
+        // button.click() 当前的宏任务直接触发了
+
+
+
+        Promise.resolve().then(() => {
+            console.log('Promise1')
+            setTimeout(() => {
+                console.log('setTimeout2')
+            }, 0);
+        })
+        setTimeout(() => {
+            console.log('setTimeout1');
+            Promise.resolve().then(() => {
+                console.log('Promise2')
+            })
+        }, 0);
+
+        // mic-task[]
+        // mac-task[,]
+
+        // Promise1  setTimeout1  Promise2  setTimeout2
+
+
+        console.log(1);
+        async function async () {
+            console.log(2);
+            await console.log(3); // Promise.resolve(console.log(3)).then(()=>console.log(4))
+            console.log(4)
+        }
+        setTimeout(() => {
+            console.log(5);
+        }, 0);
+        const promise = new Promise((resolve, reject) => {
+            console.log(6);
+            resolve(7)
+        })
+        promise.then(res => {
+            console.log(res)
+        })
+        async(); 
+        console.log(8);
+
+        // 微任务   7  4
+        // 宏任务
+
+        // 当前执行的结果  1   6   2    3   8   7 4          5
+
+
+        // 16238745
+        // 162 8 347
+        // 12384675
+
+    </script> 
+</body>
+</html>

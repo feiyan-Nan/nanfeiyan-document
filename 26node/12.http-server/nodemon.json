@@ -1,0 +1,10 @@
+{
+    "restartable": "rs",
+    "exec": "DEBUG=development zs",
+    "verbose": false,
+    "watch": [
+        "src/main.js",
+        "src/template.html"
+    ],
+    "delay": "1000"
+}

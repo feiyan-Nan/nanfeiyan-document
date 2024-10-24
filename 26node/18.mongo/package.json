@@ -1,0 +1,14 @@
+{
+  "name": "18.mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.5.1"
+  }
+}

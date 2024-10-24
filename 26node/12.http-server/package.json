@@ -1,0 +1,23 @@
+{
+  "name": "zi-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "bin": {
+    "zs": "./bin/www",
+    "zi-server": "./bin/www"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "address": "^1.2.0",
+    "chalk": "^4.0.1",
+    "commander": "^9.4.0",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.8",
+    "mime": "^3.0.0"
+  }
+}

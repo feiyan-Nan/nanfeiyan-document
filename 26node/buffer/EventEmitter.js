@@ -1,26 +1,37 @@
-function EventEmitter() {
-  this.events = {};
-  // this.on = function(event, callback) {
-  //   this.events[event] = this.events[event] || [];
-  //   this.events[event].push(callback);
-  // };
-  // this.emit = function(event, data) {
-  //   if (this.events[event]) {
-  //     this.events[event].forEach(function(callback) {
-  //       callback(data);
-  //     });
-  //   }
-  // };
-  // this.remove = function(event, callback) {
-  //   if (this.events[event]) {
-  //     var idx = this .events[event].indexOf(callback);
-  //
-  // }
+class EventEmitter{
+  constructor(){
+    this._events = {};
+  }
+
+  on(eventName, callback){
+    if(this._events[eventName]){
+      if(this.eventName !== "newListener"){
+        this.emit("newListener", eventName)
+      }
+    }
+    const callbacks = this._events[eventName] || [];
+    callbacks.push(callback);
+    this._events[eventName] = callbacks
+  }
+
+  emit(eventName, ...args){
+    const callbacks = this._events[eventName] || [];
+    callbacks.forEach(cb => cb(...args))
+  }
+
+  once(eventName, callback){
+    const one = (...args)=>{
+      callback(...args)
+      this.off(eventName, one)
+    }
+    one.initialCallback = callback;
+    this.on(eventName, one)
+  }
+
+  off(eventName, callback){
+    const callbacks = this._events[eventName] || []
+    const newCallbacks = callbacks.filter(fn => fn !== callback && fn.initialCallback !== callback /* 用于once的取消订阅 */)
+    this._events[eventName] = newCallbacks;
+  }
 }
 
-EventEmitter.prototype = {
-  on: () => {},
-  emit: () => {},
-  remove: () => {}
-};
-module.exports = EventEmitter;

@@ -1,0 +1,13 @@
+{
+  "name": "my",
+  "dependencies": {
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "mime": "^3.0.0"
+  },
+  "bin":"./3.hello.js" ,
+  "scripts": {
+    "mime":"mime a.js"
+  }
+}

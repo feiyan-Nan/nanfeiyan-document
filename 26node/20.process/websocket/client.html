@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ws = new WebSocket('ws://localhost:30000');
+        ws.onopen= function(){
+            console.log('客户端连接服务端成功');
+        }
+        ws.onmessage = function (e){
+            console.log('服务端响应的消息是',e.data)
+        }
+        setTimeout(()=>{
+            ws.send('88')
+        },1000)
+
+// Sec-WebSocket-Accept: 4QNW548jdcYgwUHIt0cDfRJ7ny0=
+// Upgrade: websocket
+
+//Sec-WebSocket-Key: K7qi8JFPkDn71Ow6xLc7LQ==
+// Sec-WebSocket-Version: 13
+// Upgrade: websocket
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+
+const { program } = require('commander')
+const pkg = require('../package.json')
+const config = require('./config')
+const createServer = require('../src/main')
+program.name('zi-server').version(pkg.version).description('setup http-server')
+
+
+let defaultValue = {}
+let usageList = []
+
+Object.entries(config).forEach(([key, { option, description, default: d, usage }]) => {
+    program.option(option, description, d)
+    usageList.push(usage);
+    defaultValue[key] = d;
+})
+const options = program.opts()
+
+program.addHelpText('after', `
+Example call:
+${usageList.map(usage => ('  $' + usage)).join('\r\n')}`);
+
+program.parse(process.argv)
+const userConfig = Object.assign(defaultValue, options);
+// 创建服务
+createServer(userConfig);
+
+
+
+
+
