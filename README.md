@@ -106,6 +106,8 @@ node: 异步非阻塞, 基于事件
 
 [cli-progress](https://www.npmjs.com/package/cli-progress) 进度条
 
+[web-vitals](https://www.npmjs.com/package/web-vitals) web-vitals是一个库, 用来检测网页的性能
+
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
 [request-idle-callback](https://www.npmjs.com/package/request-idle-callback) requestIdleCallback 的polyfill
