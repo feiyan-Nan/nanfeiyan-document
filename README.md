@@ -4,7 +4,29 @@
 history | grep "npm"
 ```
 
+npm支持通过url获取打包后的js文件
+```
+https://cdn.jsdelivr.net/npm/{组件名}@{版本号}/{文件路径}
+https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js
+```
+远程加载react组件, 通过react.lazy()异步加载, 加载到通过new Function()的方式执行
+```js
+const add = new Function('a', 'b', 'return a + b;');
+console.log(add(2, 3)); // 输出: 5
+```
+
+React的props传过来的是一个冻结对象, Object.isFrozen(props) ==> true
+/
+
 分享: commonjs 加载原理
+
+for in 循环会遍历原型链上的属性, 可以通过hasOwnProperty()方法过滤 只能迭代可枚举, 非Symbol类型的属性  (for in 循环会遍历原型链上的属性, 所以性能比较低)
+
+Object.getOwnPropertyNames(obj) 获取对象自身所有属性, 包括不可枚举的属性
+Object.getOwnPropertySymbols(obj) 获取对象自身所有Symbol类型的属性
+
+Object.getOwnPropertyNames(obj).concat(Object.getOwnPropertySymbols(obj)) 获取对象自身所有属性
+Reflect.ownKeys(obj) 获取对象自身所有属性, 包括不可枚举的属性和Symbol类型的属性
 
 
 extends  继承实例属性和原型属性
@@ -107,6 +129,8 @@ node: 异步非阻塞, 基于事件
 [cli-progress](https://www.npmjs.com/package/cli-progress) 进度条
 
 [web-vitals](https://www.npmjs.com/package/web-vitals) web-vitals是一个库, 用来检测网页的性能
+
+[react-app-polyfill](https://www.npmjs.com/package/react-app-polyfill) 解决一些es6语法不支持的问题
 
 [promises-aplus-tests](https://www.npmjs.com/package/promises-aplus-tests) 测试promise的A+规范
 
