@@ -122,6 +122,9 @@ node: 异步非阻塞, 基于事件
 
 **path.resolve 参数里面如果有/开头, 就会从根目录开始找**
 
+## electron
+
+[electron-drag](https://www.npmjs.com/package/electron-drag) 拖拽窗口的
 
 
 ## 脚手架工具
