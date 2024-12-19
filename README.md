@@ -15,8 +15,20 @@ const add = new Function('a', 'b', 'return a + b;');
 console.log(add(2, 3)); // 输出: 5
 ```
 
+AOP 面向切面编程, 是一种通过预编译和运行期动态代理实现程序功能复用的技术
+IOC 控制反转, 是一种通过描述(在配置文件)的方式来实现对象之间的依赖关系
+DI 依赖注入, 是一种实现对象之间的依赖关系由容器进行管理
+
+
+typeScript 中的interface, 如果是同名的, 会合并, 并且可以使用extends继承
+
+1. e.currentTarget 返回绑定事件的元素, e.target 返回触发事件的元素
+2. mouseenter和mouseleave 事件没有冒泡传播机制, 只能通过mouseover和mouseout事件
+3.
+
 React的props传过来的是一个冻结对象, Object.isFrozen(props) ==> true
-/
+
+react18中想要实现同步更新, flushSync() 同步执行
 
 分享: commonjs 加载原理
 

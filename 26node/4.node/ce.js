@@ -6,6 +6,4 @@ const fn1 = vm.compileFunction('console.log(abc)', [
 ])
 fn1('22')
 
-
 // fn()
-
