@@ -20,6 +20,11 @@ IOC 控制反转, 是一种通过描述(在配置文件)的方式来实现对象
 DI 依赖注入, 是一种实现对象之间的依赖关系由容器进行管理
 
 
+TODO:
+viewport-fit: cover; 结合
+![img_7.png](img_7.png)
+
+
 typeScript 中的interface, 如果是同名的, 会合并, 并且可以使用extends继承
 
 1. e.currentTarget 返回绑定事件的元素, e.target 返回触发事件的元素
