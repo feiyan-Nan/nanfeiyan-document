@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Title</title>
+  <script>
+    // window.addEventListener('unhandledrejection', (event) => {
+    //   console.log(event, '123');
+    // })
+    //
+    // window.addEventListener('error', (event) => {
+    //   console.log(event, '456');
+    // })
+
+    const promiseError= async () => {
+      await new Promise((resolve, reject) => {
+        window.joyy.error ='error'
+      })
+    }
+
+    // promiseError()
+    // window.joyy.error ='error'
+
+
+    document.addEventListener(
+      'touchstart',
+      (event) => {
+        console.log(event);
+      },
+      {
+        capture: true, // 捕获阶段
+        passive: true, // 默认不阻止默认事件
+      }
+    );
+
+
+
+  </script>
+</head>
+<body>
+1234
+
+</body>
+</html>
