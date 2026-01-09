@@ -1,5 +1,9 @@
 # nanfeiyan-document
 
+Smart Input Pro ​(Chinese)​ 激活
+https://wwtu.lanzoue.com/b0sy0ed0f
+密码:f8zo
+
 ```shell
 history | grep "npm"
 ```
