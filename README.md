@@ -4,6 +4,8 @@ Smart Input Pro ​(Chinese)​ 激活
 https://wwtu.lanzoue.com/b0sy0ed0f
 密码:f8zo
 
+jetbrains:  https://violetfreesia.lanzouq.com/b02qs6n25e   密码:linux.do
+
 ```shell
 history | grep "npm"
 ```
